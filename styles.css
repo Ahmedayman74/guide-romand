@@ -46,6 +46,10 @@
   --card-4: #E6E1F4;        /* light lavender */
   --card-5: #F5EBD2;        /* light sand */
   --card-6: #F7DEE4;        /* light rose */
+  /* Profession cards: one soft colour per main category (card) + a slightly stronger one (pill) */
+  --cat-legal: #E3EDF8;      --cat-legal-tag: #C8DBF1;    /* blue  — Juridique et finance */
+  --cat-build: #FAE6E3;      --cat-build-tag: #F2CBC4;    /* red   — Construction et rénovation */
+  --cat-garden: #E2EEE3;     --cat-garden-tag: #C7DFCA;   /* green — Maison et jardin */
 
   /* Derived (tints of navy / white only) */
   --line: rgba(17, 44, 71, 0.12);
@@ -1043,7 +1047,25 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
   background: var(--card-bg, var(--card-1));
   border-radius: var(--radius-lg);
 }
-.photo-card--color .photo-card__tag { position: static; }
+.photo-card--color .photo-card__tag { position: static; background: var(--tag-bg, var(--white)); }
+/* Colour by main category (data-domain on the card) */
+.photo-card--color[data-domain="juridique-finance"]       { --card-bg: var(--cat-legal);  --tag-bg: var(--cat-legal-tag); }
+.photo-card--color[data-domain="construction-renovation"] { --card-bg: var(--cat-build);  --tag-bg: var(--cat-build-tag); }
+.photo-card--color[data-domain="maison-jardin"]           { --card-bg: var(--cat-garden); --tag-bg: var(--cat-garden-tag); }
+/* Picture at the top of the card: same 4:3 proportions and corner radius on every card,
+   no filter or overlay; the category pill sits on its top-left corner */
+.photo-card--color .photo-card__media--top {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 1rem;
+  background: var(--tag-bg, var(--cream));
+  border-radius: var(--radius);
+}
+.photo-card--color .photo-card__media--top .photo-card__tag { position: absolute; top: 0.625rem; left: 0.625rem; }
+/* Photo cards (Block 4): the pill shows the main category, in the same colours as Block 2 */
+.photo-card[data-domain="juridique-finance"] .photo-card__tag       { background: var(--cat-legal-tag); }
+.photo-card[data-domain="construction-renovation"] .photo-card__tag { background: var(--cat-build-tag); }
+.photo-card[data-domain="maison-jardin"] .photo-card__tag           { background: var(--cat-garden-tag); }
 .photo-card--color .photo-card__body { margin-top: auto; padding: 0 0.5rem 0.625rem; }
 .photo-card--color .photo-card__title { margin-top: 0; font-size: 1.375rem; letter-spacing: -0.015em; }
 .photo-card--color .photo-card__meta {
@@ -1128,10 +1150,10 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
   display: grid;
   grid-row: span 4;
   grid-template-rows: subgrid;
-  justify-items: start;                  /* left-aligned, like the section title */
+  justify-items: center;                 /* icon, title and text centred in each box (all pages, all sizes) */
   margin: 0 0 1.25rem;                   /* space between rows of cards when they wrap */
   padding: clamp(1.5rem, 1.25rem + 0.75vw, 2rem) 1.25rem;
-  text-align: start;
+  text-align: center;
   background: var(--white);
   border-radius: var(--radius-lg);
 }
@@ -1165,7 +1187,7 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
 }
 /* Browsers without subgrid: reserve 2 lines for every subtitle instead */
 @supports not (grid-template-rows: subgrid) {
-  .criterion { display: flex; flex-direction: column; align-items: flex-start; }
+  .criterion { display: flex; flex-direction: column; align-items: center; }
   .criterion__lead { min-height: 2.8em; }
 }
 
@@ -1175,7 +1197,7 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
   place-items: center;
   width: 64px;
   height: 64px;
-  margin: 0 0 1.25rem;
+  margin: 0 auto 1.25rem;
   color: var(--navy);
   background: var(--cream);
   border-radius: 50%;
@@ -1433,6 +1455,79 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
 }
 .tile--price { grid-row: span 4; }        /* icon · title · text · price */
 .tile--no-icon { grid-row: span 2; }      /* title · text */
+/* Services (profession pages): bento grid — white cards on cream, wide/narrow pattern
+   (row 1: wide + narrow · row 2: narrow + wide · row 3: wide + narrow).
+   Icon, title and text share rows through subgrid, so they line up across a row. */
+.bento {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: 1.25rem;
+  row-gap: 0;
+  margin: 0 0 -1.25rem;
+  padding: 0;
+  list-style: none;
+}
+.bento__card {
+  display: grid;
+  grid-row: span 3;                        /* icon · title · text */
+  grid-template-rows: subgrid;
+  align-content: start;
+  margin-bottom: 1.25rem;
+  padding: clamp(1.75rem, 1.4rem + 1vw, 2.5rem);
+  background: var(--white);
+  border-radius: var(--radius-lg);
+}
+@media (min-width: 640px) { .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) {
+  .bento { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .bento__card:nth-child(4n + 1),
+  .bento__card:nth-child(4n + 4) { grid-column: span 2; }   /* 1, 4, 5 … wide */
+}
+.bento__icon {
+  display: grid;
+  place-items: center;
+  justify-self: start;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1.5rem;
+  color: var(--navy);
+  border-radius: var(--radius);
+}
+.bento__icon .icon { width: 28px; height: 28px; stroke-width: 1.5; }
+.bento__card:nth-child(6n + 1) .bento__icon { background: var(--card-1); }
+.bento__card:nth-child(6n + 2) .bento__icon { background: var(--card-2); }
+.bento__card:nth-child(6n + 3) .bento__icon { background: var(--card-3); }
+.bento__card:nth-child(6n + 4) .bento__icon { background: var(--card-4); }
+.bento__card:nth-child(6n + 5) .bento__icon { background: var(--card-5); }
+.bento__card:nth-child(6n + 6) .bento__icon { background: var(--card-6); }
+.bento__title { font-size: var(--fs-h3); line-height: 1.3; letter-spacing: -0.015em; color: var(--navy); }
+.bento__text { max-width: 56ch; margin-top: 0.625rem; color: var(--slate); }
+
+/* « Comment bien choisir »: the step number as a large, subtle watermark in the corner */
+.tile--numbered {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: background-color var(--dur) var(--ease);
+}
+.tile--numbered > :not(.tile__watermark) { position: relative; z-index: 1; }   /* text always above the number */
+.tile--numbered .tile__text { padding-right: 3.5rem; }      /* keeps the text clear of the number */
+.tile__watermark {
+  position: absolute;
+  right: 0.75rem;
+  bottom: -0.22em;                       /* partly cropped by the card's bottom edge */
+  z-index: 0;
+  font-size: clamp(7.5rem, 6rem + 3vw, 9.5rem);   /* ~120–150px */
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: #EAE2D4;                        /* slightly darker cream: decorative only */
+  pointer-events: none;
+  user-select: none;
+  transition: color var(--dur) var(--ease);
+}
+.tile--numbered:hover { background: #F1EBE2; }
+.tile--numbered:hover .tile__watermark { color: rgba(237, 177, 67, 0.32); }   /* shifts to the amber accent */
 /* Cards without icons (profession pages): every card the same height, in every row */
 @media (min-width: 640px) {
   .tile-grid:has(> .tile--no-icon) { grid-auto-rows: 1fr; row-gap: var(--tile-gap); margin-bottom: 0; }
@@ -1549,6 +1644,74 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
 .g-attrib { display: inline-flex; align-items: center; flex-shrink: 0; line-height: 1; }
 .g-attrib__logo { width: auto; height: 17px; }
 .rank-card__score { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; color: var(--navy); }
+
+/* ---- Company card (all comparison pages) ----
+   Logo square (rank badge on its corner) · name, stars, text, info row, points · white side box */
+.company-card { row-gap: 1.5rem; }
+@media (min-width: 900px) {
+  .company-card { grid-template-columns: auto minmax(0, 1fr) minmax(240px, 300px); column-gap: clamp(1.5rem, 0.5rem + 2vw, 2.5rem); }
+  .company-card .rank-card__aside { align-self: center; }       /* side box centred against the left part */
+}
+.company-logo {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 104px;
+  height: 104px;
+  padding: 10px;
+  background: var(--white);
+  border-radius: var(--radius);
+}
+.company-logo--dark { background: var(--navy); }                 /* logos drawn in white */
+.company-logo img { width: 100%; height: 100%; object-fit: contain; }
+.company-logo__initials { font-size: 1.75rem; font-weight: 700; letter-spacing: 0.02em; color: var(--navy); }
+.company-logo__rank {                                            /* rank: small navy badge on the logo's corner */
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--navy);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--cream);                            /* keeps the badge apart from the logo square */
+}
+.company-card__name { font-size: clamp(1.5rem, 1.3rem + 0.7vw, 2rem); letter-spacing: -0.02em; }
+.company-card__rating { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin-top: 0.625rem; color: var(--slate); }
+.company-card__rating .stars { margin: 0; }
+.company-card__rating strong { color: var(--navy); font-weight: 600; }
+.company-card .rank-card__text { margin-top: 1rem; }
+.company-card__info { display: flex; flex-wrap: wrap; gap: 0.75rem 2.5rem; margin: 1.25rem 0 0; }
+.company-card__info > div { display: flex; align-items: center; gap: 0.5rem; }
+.company-card__info dt { font-size: 0.9375rem; color: var(--slate); }
+.company-card__info dd { margin: 0; font-weight: 600; color: var(--navy); }
+.company-card__points { margin-top: 1.5rem; }
+.company-card .rank-card__label { margin-top: 0; }
+.company-card .rank-card__points li { align-items: flex-start; }
+.company-card .rank-card__points .icon { margin-top: 0.15em; }
+.company-card .rank-card__aside { padding: 1.5rem; }
+.company-card .rank-card__rating .stars { margin: 0.625rem 0 0; }
+@media (max-width: 899px) {
+  .company-card { grid-template-columns: auto minmax(0, 1fr); column-gap: 1.25rem; }
+  .company-card .rank-card__main { display: contents; }
+  .company-card .company-card__name { align-self: center; }
+  .company-card .company-card__rating,
+  .company-card .rank-card__text,
+  .company-card .company-card__info,
+  .company-card .company-card__points,
+  .company-card .rank-card__aside { grid-column: 1 / -1; }
+  .company-card .company-card__rating { margin-top: -0.75rem; }
+  .company-card .rank-card__text,
+  .company-card .company-card__info,
+  .company-card .company-card__points { margin-top: -0.25rem; }
+}
+@media (max-width: 559px) {
+  .company-logo { width: 80px; height: 80px; padding: 8px; }
+}
 .rank-card__aside .btn { width: 100%; }
 
 /* ---- Comparison table: real <table>. On small screens the whole table slides
@@ -1564,25 +1727,89 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
 }
 .table-scroll::-webkit-scrollbar { display: none; }   /* Chrome, Safari, Edge */
 .table-scroll:focus-visible { outline-offset: 2px; }
-.compare-table { width: 100%; min-width: 1100px; border-collapse: separate; border-spacing: 0 0.375rem; margin-block: -0.375rem; font-size: 0.9375rem; }
+.compare-table { width: 100%; min-width: 1180px; border-collapse: separate; border-spacing: 0 0.375rem; margin-block: -0.375rem; font-size: 0.9375rem; }
 .compare-table th,
-.compare-table td { padding: 1rem 1.25rem; text-align: start; vertical-align: top; }
-.compare-table thead th {
+.compare-table td { padding: 1rem 1.25rem; text-align: start; vertical-align: middle; }   /* short cells sit in the middle of the row */
+.compare-table thead th {                  /* header: smaller, muted gray-blue, so the data stands out */
   padding-block: 0.875rem 0.5rem;
-  font-size: var(--fs-small);
+  font-size: 0.8125rem;
   font-weight: 600;
-  white-space: nowrap;
-  color: var(--navy);
+  line-height: 1.3;
+  color: var(--slate);
+  vertical-align: bottom;
 }
 .compare-table tbody td,
 .compare-table tbody th { background: var(--white); }
 .compare-table tbody tr > :first-child { border-radius: var(--radius) 0 0 var(--radius); }
 .compare-table tbody tr > :last-child { border-radius: 0 var(--radius) var(--radius) 0; }
-.compare-table td { min-width: 12rem; color: var(--slate); }   /* text columns wide enough to avoid tall rows when the table slides */
-.compare-table td.compare-table__rank, .compare-table td.compare-table__rating { min-width: 0; }
+.compare-table td { min-width: 9.5rem; color: var(--slate); }   /* text columns wide enough to avoid tall rows when the table slides */
+.compare-table td.compare-table__rank, .compare-table td.compare-table__rating, .compare-table td.compare-table__center { min-width: 0; }
+.compare-table .compare-table__wide { min-width: 21.5rem; }      /* Spécialité / Prestations: 2 lines at most */
 .compare-table tbody th { min-width: 10.5rem; font-weight: 600; color: var(--navy); }
-.compare-table .compare-table__rank { width: 4rem; font-weight: 600; color: var(--navy); }
-.compare-table .compare-table__rating { white-space: nowrap; }   /* « 4,6/5 (18 avis) » on one line */
+
+/* Rank: a round navy badge; the #1 row gets the amber badge */
+.compare-table .compare-table__rank { width: 4.5rem; min-width: 4.5rem; padding-inline: 1rem 0.5rem; }
+.rank-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--navy);
+  border-radius: 50%;
+}
+.compare-table tr.is-first .rank-badge { color: var(--navy); background: var(--yellow); }
+
+@media (max-width: 639px) {                /* phones: slightly narrower rank column */
+  .compare-table .compare-table__rank,
+  .compare-table thead th:first-child { width: 3.25rem; min-width: 3.25rem; padding-inline: 0.75rem 0.25rem; }
+  .rank-badge { width: 2rem; height: 2rem; font-size: 0.9375rem; }
+}
+
+/* Google rating: 5 amber stars (filled to the score), the original text under them */
+.compare-table .compare-table__rating { white-space: nowrap; }
+.compare-table__head-g { display: inline-flex; align-items: center; gap: 0.375rem; }
+.compare-table__head-g img { width: auto; height: 14px; }
+.stars {
+  --star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.5l2.94 6.06 6.56.92-4.78 4.6 1.17 6.52L12 17.5l-5.89 3.1 1.17-6.52-4.78-4.6 6.56-.92z'/%3E%3C/svg%3E");
+  position: relative;
+  display: block;
+  width: 5.5rem;
+  height: 1.1rem;
+  margin-bottom: 0.375rem;
+  background: var(--line-strong);          /* empty part of the stars */
+  -webkit-mask: var(--star) repeat-x left center / 1.1rem 1.1rem;
+          mask: var(--star) repeat-x left center / 1.1rem 1.1rem;
+}
+.stars::before {                           /* filled part, in amber, as wide as the score */
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--rating, 0) / 5 * 100%);
+  background: var(--yellow);
+}
+.compare-table__rating-text { display: block; }
+
+/* « Inscrit »: soft green pill with a check */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3125rem 0.75rem 0.3125rem 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: #1F5F36;                          /* dark green on light green: 7.6:1 */
+  background: #E2F2E6;
+  border-radius: var(--radius-pill);
+}
+.status-pill .icon { width: 15px; height: 15px; stroke-width: 2.25; }
+
+/* Missing information reads as missing, not as data */
+.compare-table__missing { color: #66758A; font-style: italic; }   /* 4.7:1 on white */
 
 /* ---- Closing block extra line (last update) ---- */
 .cta--balanced .section-head__title {

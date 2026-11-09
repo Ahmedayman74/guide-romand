@@ -56,8 +56,11 @@
    *           Only these appear in the « Ville » select.
    *           NOTE: currently filled from the popular rankings list only —
    *           complete with every published ranking before going live.
-   * - image:  optional. 800×600 JPG + WebP in /images (temporary Unsplash photos,
-   *           credit kept next to each). Missing images fall back to the icon panel.
+   * - image:  the activity's picture, shown at the top of its card on the homepage
+   *           (Block 2) AND on the inner pages. To change it: replace the file in
+   *           /images with one of the same name (800×600, JPG + WebP), or point
+   *           src / webp to another file here. Temporary Unsplash photos, credit kept
+   *           next to each. Card colour = the domain's colour (styles.css, --cat-*).
    */
   const PROFESSIONS = [
     {
@@ -238,7 +241,7 @@
 
   /** Display settings that matter once the catalogue grows. */
   const SETTINGS = {
-    cardColors: 6,             // Block 2 card colours --card-1 … --card-6 (styles.css), used in turn
+    // Block 2 card colours: one per domain (styles.css: --cat-legal / --cat-build / --cat-garden)
     heroCycleMs: 3800,         // hero animation: time per ranking
     filterAllId: '*',          // value of the « Tous » chip
     filterAllLabel: 'Tous',
@@ -398,8 +401,22 @@
    */
   function photoCard({ href, title, tag, tagIsDecorative, text, image, icon: iconName, color, attrs }) {
     if (color) {
-      return el('li', { class: 'photo-card photo-card--color', ...attrs },
-        tag ? el('span', { class: 'photo-card__tag', 'aria-hidden': tagIsDecorative ? 'true' : null }, tag) : null,
+      const tagEl = tag ? el('span', { class: 'photo-card__tag', 'aria-hidden': tagIsDecorative ? 'true' : null }, tag) : null;
+      let media = null;
+      if (image && image.src) {
+        const img = el('img', {
+          src: image.src, alt: image.alt || '', width: 800, height: 600,
+          loading: 'lazy', decoding: 'async', draggable: 'false'
+        });
+        media = el('div', { class: 'photo-card__media photo-card__media--top' },
+          image.credit ? document.createComment(` ${image.credit} `) : null,
+          image.webp ? el('picture', null, el('source', { type: 'image/webp', srcset: image.webp }), img) : img,
+          tagEl);
+        // Missing / broken photo → the card keeps its colour and pill, without the photo
+        img.addEventListener('error', () => { media.replaceWith(tagEl || ''); }, { once: true });
+      }
+      return el('li', { class: 'photo-card photo-card--color' + (media ? ' photo-card--pic' : ''), ...attrs },
+        media || tagEl,
         el('div', { class: 'photo-card__body' },
           el('h3', { class: 'photo-card__title' },
             el('a', { class: 'photo-card__link', href, draggable: 'false' }, title)
@@ -436,13 +453,13 @@
 
     if (tag) media.append(el('span', { class: 'photo-card__tag', 'aria-hidden': tagIsDecorative ? 'true' : null }, tag));
 
-    card.append(
+    card.append(...[
       media,
       el('h3', { class: 'photo-card__title' },
         el('a', { class: 'photo-card__link', href, draggable: 'false' }, title)
       ),
       text ? el('p', { class: 'photo-card__meta' }, text) : null
-    );
+    ].filter(Boolean));
     return card;
   }
 
@@ -670,7 +687,8 @@
       title: p.label,
       tag: domainLabel.get(p.domain),            // category pill, top left
       text: p.description,
-      color: true,                               // full-colour card (colour set in applyFilter)
+      image: p.image,                            // picture at the top of the card
+      color: true,                               // card colour = its domain's colour (styles.css)
       attrs: { 'data-domain': p.domain }
     }));
     track.append(...cards);
@@ -716,16 +734,6 @@
         if (show) card.style.setProperty('--i', index++);
       });
 
-      // One soft colour per visible card, in turn. If the last card would get the same
-      // colour as the first (where the loop wraps around), it takes a different one.
-      const shown = cards.filter((c) => !c.hidden);
-      const n = SETTINGS.cardColors;
-      shown.forEach((card, i) => {
-        let c = i % n;
-        if (i === shown.length - 1 && shown.length > 1 && c === 0) c = Math.floor(n / 2);
-        card.style.setProperty('--card-bg', `var(--card-${c + 1})`);
-      });
-
       slider.build(0);
 
       // Short staggered fade-in of the new set (CSS skips it with reduced motion).
@@ -766,14 +774,21 @@
     const track = $('[data-rank-track]', root || document);
     if (!root || !track) return;
 
-    const cards = POPULAR_RANKINGS.map((r) => photoCard({
-      href: r.url,
-      title: `${r.metier} à ${r.ville}`,
-      tag: r.metier,
-      tagIsDecorative: true,                     // the title already says the profession
-      text: `Mis à jour le ${r.updated} · ${r.companies} entreprises analysées`,
-      image: { ...rankingImage(r.image), alt: r.alt, credit: r.credit }
-    }));
+    // Pill on the photo = the profession's main category, in its colour (same as Block 2).
+    const domainOf = (metier) => {
+      const p = PROFESSIONS.find((x) => x.label === metier);
+      return p ? DOMAINS.find((d) => d.id === p.domain) : null;
+    };
+    const cards = POPULAR_RANKINGS.map((r) => {
+      const domain = domainOf(r.metier);
+      return photoCard({
+        href: r.url,
+        title: `${r.metier} à ${r.ville}`,
+        tag: domain ? domain.label : null,
+        image: { ...rankingImage(r.image), alt: r.alt, credit: r.credit },
+        attrs: domain ? { 'data-domain': domain.id } : undefined
+      });
+    });
     track.append(...cards);
 
     createLoopSlider({
