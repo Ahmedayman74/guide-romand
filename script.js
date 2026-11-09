@@ -1192,6 +1192,28 @@
     fit();
   }
 
+  /* ---- 4.5c Cards without icons: titles share one height per group ----
+     So the descriptions start on the same line in every card, even when one
+     title wraps onto more lines (CSS already reserves 2 lines without JS). */
+  function initEqualTitles() {
+    const grids = [...document.querySelectorAll('.tile-grid')].filter((g) => g.querySelector(':scope > .tile--no-icon'));
+    if (!grids.length) return;
+    const wide = window.matchMedia('(min-width: 640px)');
+    const fit = () => {
+      grids.forEach((g) => {
+        const titles = [...g.querySelectorAll(':scope > .tile--no-icon > .tile__title')];
+        titles.forEach((t) => { t.style.minHeight = ''; });
+        if (!wide.matches) return;
+        const max = Math.max(...titles.map((t) => t.getBoundingClientRect().height));
+        titles.forEach((t) => { t.style.minHeight = Math.ceil(max) + 'px'; });
+      });
+    };
+    let t;
+    window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(fit, 120); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    fit();
+  }
+
   /* ---- 4.6 Current year in the footer ---------------------------------- */
   function initYear() {
     const year = $('[data-year]');
@@ -1214,5 +1236,6 @@
   initFaq();
   initContactForm();
   initCtaFit();
+  initEqualTitles();
   initYear();
 })();
