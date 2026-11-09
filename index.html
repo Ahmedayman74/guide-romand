@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== SEO ===== -->
+  <title>Guide Romand | Meilleurs professionnels de Suisse romande</title>
+  <meta name="description" content="Avocats, fiduciaires, architectes, paysagistes, entreprises sanitaires : comparez les meilleurs professionnels de Suisse romande, ville par ville.">
+  <link rel="canonical" href="https://guideromand.ch/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_CH">
+  <meta property="og:url" content="https://guideromand.ch/">
+  <meta property="og:title" content="Guide Romand | Meilleurs professionnels de Suisse romande">
+  <meta property="og:description" content="Avocats, fiduciaires, architectes, paysagistes, entreprises sanitaires : comparez les meilleurs professionnels de Suisse romande, ville par ville.">
+  <meta name="theme-color" content="#112C47">
+
+  <!-- ===== Fonts: Instrument Sans (headings + body) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&amp;display=swap">
+
+  <!-- ===== Hero image: preconnect + preload (LCP) ===== -->
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preload" as="image" fetchpriority="high"
+        href="https://images.unsplash.com/photo-1699470762437-bd145c9042ee?auto=format&amp;fit=crop&amp;q=80&amp;w=1600"
+        imagesrcset="https://images.unsplash.com/photo-1699470762437-bd145c9042ee?auto=format&amp;fit=crop&amp;q=80&amp;w=900 900w, https://images.unsplash.com/photo-1699470762437-bd145c9042ee?auto=format&amp;fit=crop&amp;q=80&amp;w=1600 1600w, https://images.unsplash.com/photo-1699470762437-bd145c9042ee?auto=format&amp;fit=crop&amp;q=80&amp;w=2400 2400w"
+        imagesizes="calc(100vw - 2.5rem)">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Flags JS support before first paint (used for the mobile menu and reveal-on-scroll). -->
+  <script>document.documentElement.classList.add('js');</script>
+  <!-- GSAP (pinned version) — used only by the hero stage animation. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       ICON SPRITE — inline SVG line icons, referenced with <use href="#i-…">.
+       All icons inherit stroke colour from currentColor (see .icon in styles.css).
+       ========================================================================== -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <!-- UI -->
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4.5 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16M14.5 9h4a1 1 0 0 1 1 1v11M3 21h18M8 8h3M8 12h3M8 16h3"/></symbol>
+    <!-- Professions -->
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3.5v16.5M8 20h8M5 7h14"/><path d="M5 7 2.5 13a2.5 2.5 0 0 0 5 0L5 7ZM19 7l-2.5 6a2.5 2.5 0 0 0 5 0L19 7Z"/></symbol>
+    <symbol id="i-calculator" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8.5 7h7M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 14.5h.01M12 14.5h.01M15.5 14.5h.01M8.5 18h.01M12 18h.01M15.5 18h.01"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M11 7 6 20.5M13 7l5 13.5M7.6 16h8.8"/></symbol>
+    <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 3.5s6 6.2 6 10.5a6 6 0 0 1-12 0c0-4.3 6-10.5 6-10.5Z"/><path d="M9.2 14.5a2.9 2.9 0 0 0 2.8 2.6"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4c-9 0-15 5-15 12 0 1.4.3 2.7.8 4C13.5 20 20 14.5 20 4Z"/><path d="M4 20.5c3-5 7-8.5 11-10.5"/></symbol>
+    <!-- Mobile drawer -->
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4.5" width="14" height="16.5" rx="2"/><path d="M9 4.5v-1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1M9 13l2 2 4-4"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4.5 7 7.5 6 7.5-6"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/></symbol>
+    <!-- Criteria -->
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9L12 3.5Z"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="m8.6 13.6-1.6 7 5-2.6 5 2.6-1.6-7"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 8.2 7 9.5 4-1.3 7-5.1 7-9.5V6l-7-3Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7a1 1 0 0 1 .7.3l7.6 7.6a1 1 0 0 1 0 1.4l-7.7 7.7a1 1 0 0 1-1.4 0l-7.6-7.6a1 1 0 0 1-.3-.7Z"/><circle cx="8" cy="8" r="1.4"/></symbol>
+    <!-- Fine-line icons (hero trust row + criteria), drawn for a 1.5 stroke -->
+    <symbol id="i-local" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><path d="M9.6 12.6V10.3L12 8.4l2.4 1.9v2.3z"/></symbol>
+    <symbol id="i-checklist" viewBox="0 0 24 24"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="m8 8.6 1.2 1.2 2.3-2.3M8 14.6l1.2 1.2 2.3-2.3M13.8 8.8h2.4M13.8 14.8h2.4"/></symbol>
+    <symbol id="i-calendar-refresh" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="M14.7 13.3a2.9 2.9 0 1 0 .2 2.6"/><path d="M15 11.7v1.8h-1.8"/></symbol>
+    <symbol id="i-c-reviews" viewBox="0 0 24 24"><path d="M5 4.5h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-8.5L6 21v-3.5H5a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2Z"/><path d="m12 7.8 1 2.05 2.25.33-1.63 1.59.39 2.24L12 12.95l-2.01 1.06.39-2.24-1.63-1.59 2.25-.33Z"/></symbol>
+    <symbol id="i-c-expertise" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="m8.7 13.4-1.7 7.1 5-2.6 5 2.6-1.7-7.1"/></symbol>
+    <symbol id="i-c-reliability" viewBox="0 0 24 24"><path d="M12 3.2 5 6v5.3c0 4.4 2.9 8 7 9.5 4.1-1.5 7-5.1 7-9.5V6Z"/><path d="m9.3 12 1.9 1.9 3.6-3.7"/></symbol>
+    <symbol id="i-c-local" viewBox="0 0 24 24"><path d="M9 6.3 3.5 8.2v12l5.5-1.9 6 1.9 5.5-1.9v-12l-2 .7"/><path d="M15.5 8.6c0 2.6-3.5 5.9-3.5 5.9s-3.5-3.3-3.5-5.9a3.5 3.5 0 0 1 7 0Z"/></symbol>
+    <symbol id="i-c-pricing" viewBox="0 0 24 24"><path d="M3.5 12.3V5A1.5 1.5 0 0 1 5 3.5h7.3a1.5 1.5 0 0 1 1.06.44l7.2 7.2a1.5 1.5 0 0 1 0 2.12l-7.3 7.3a1.5 1.5 0 0 1-2.12 0l-7.2-7.2a1.5 1.5 0 0 1-.44-1.06Z"/><circle cx="8.5" cy="8.5" r="1.5"/></symbol>
+  </svg>
+
+  <!-- Accessibility: keyboard users can jump past the header. -->
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <!-- ==========================================================================
+       HEADER — floating pill, as wide as its content (20px left / 13px right padding)
+       ========================================================================== -->
+  <header class="site-header" data-header>
+    <div class="site-header__pill">
+      <a class="site-header__logo" href="/">
+        <picture>
+          <source type="image/webp" srcset="images/logo-guideromand.webp">
+          <img src="images/logo-guideromand.png" alt="GuideRomand.ch" width="1005" height="170" decoding="async">
+        </picture>
+      </a>
+
+      <!-- Desktop navigation (from 960px). On mobile the drawer replaces it. -->
+      <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#metiers">Métiers</a></li>
+          <li><a class="site-nav__link" href="/methodologie/">Méthodologie</a></li>
+          <li><a class="site-nav__link" href="/a-propos/">À propos</a></li>
+          <li><a class="site-nav__link" href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--sm site-header__cta" href="/entreprises/">Pour les professionnels</a>
+
+      <!-- Mobile only: opens the slide-in drawer (#mobile-drawer). -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Menu" data-drawer-open>
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+  </header>
+  <!-- ==========================================================================
+       MOBILE DRAWER — slides in from the right (below 960px).
+       Opened by the burger; Esc, the × button, the dimmed page or a link close it.
+       Focus moves into the panel and stays there while it is open; page scroll is locked.
+       ========================================================================== -->
+  <div class="drawer" id="mobile-drawer" hidden data-drawer>
+    <div class="drawer__backdrop" data-drawer-close></div>
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu" tabindex="-1">
+      <div class="drawer__head">
+        <button class="drawer__close" type="button" aria-label="Fermer le menu" data-drawer-close>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+
+      <nav class="drawer__body" aria-label="Navigation mobile">
+        <ul class="drawer__list">
+          <li><a class="drawer__link" href="#metiers"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-grid"></use></svg>Métiers</a></li>
+          <li><a class="drawer__link" href="/methodologie/"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-clipboard"></use></svg>Méthodologie</a></li>
+          <li><a class="drawer__link" href="/a-propos/"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-info"></use></svg>À propos</a></li>
+          <li><a class="drawer__link" href="/contact/"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg>Contact</a></li>
+        </ul>
+
+        <hr class="drawer__divider">
+
+        <!-- Profession links: rebuilt from PROFESSIONS by script.js (static list = fallback). -->
+        <ul class="drawer__list" data-drawer-professions>
+          <li><a class="drawer__link" href="/avocat/"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-scale"></use></svg>Avocats</a></li>
+          <li><a class="drawer__link" href="/fiduciaire/"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calculator"></use></svg>Fiduciaires</a></li>
+          <li><a class="drawer__link" href="/architecte/"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-compass"></use></svg>Architectes</a></li>
+          <li><a class="drawer__link" href="/sanitaire/"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-droplet"></use></svg>Sanitaires</a></li>
+          <li><a class="drawer__link" href="/paysagiste/"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-leaf"></use></svg>Paysagistes</a></li>
+        </ul>
+      </nav>
+
+      <div class="drawer__foot">
+        <a class="btn btn--primary btn--lg drawer__cta" href="/entreprises/">Pour les professionnels</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="contenu">
+
+    <!-- ==========================================================================
+         HERO — one rounded block with the mountain photo as background (navy overlay).
+         The site header (above, outside <main>) sits inside this block visually.
+         Left: title, text, search, trust points. Right: animated ranking card.
+         ========================================================================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- Photo : Unsplash, photo-1699470762437-bd145c9042ee — crédit à compléter : « Photo de [Nom du photographe] sur Unsplash » -->
+      <img class="hero__bg"
+           src="https://images.unsplash.com/photo-1699470762437-bd145c9042ee?auto=format&amp;fit=crop&amp;q=80&amp;w=1600"
+           srcset="https://images.unsplash.com/photo-1699470762437-bd145c9042ee?auto=format&amp;fit=crop&amp;q=80&amp;w=900 900w, https://images.unsplash.com/photo-1699470762437-bd145c9042ee?auto=format&amp;fit=crop&amp;q=80&amp;w=1600 1600w, https://images.unsplash.com/photo-1699470762437-bd145c9042ee?auto=format&amp;fit=crop&amp;q=80&amp;w=2400 2400w"
+           sizes="calc(100vw - 2.5rem)"
+           width="2400" height="1350"
+           alt="Les Alpes vues depuis la Suisse romande"
+           fetchpriority="high" decoding="async">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content">
+            <p class="hero__subtitle">Comparez les avocats, fiduciaires, architectes et artisans de votre ville.</p>
+            <h1 class="hero__title" id="hero-title" style="--title-len: 54">Trouvez les meilleurs professionnels de Suisse romande</h1>
+            <p class="hero__text">Guide Romand présente les professionnels de Lausanne, Genève, Neuchâtel, Fribourg et Nyon selon des critères expliqués, pour vous aider à choisir sereinement.</p>
+
+            <!-- Search: options are generated from PROFESSIONS / CITIES in script.js.
+                 « Ville » only lists cities with a ranking for the selected profession.
+                 Submitting goes to /[metier-slug]/[ville-slug]/. -->
+            <form class="search" role="search" action="/" method="get" data-search>
+              <div class="search__bar">
+                <div class="search__field">
+                  <label class="search__label" for="search-metier">Métier</label>
+                  <select class="search__select" id="search-metier" name="metier" required data-search-metier>
+                    <option value="">Choisir un métier</option>
+                  </select>
+                </div>
+                <div class="search__field is-disabled" data-search-ville-field>
+                  <label class="search__label" for="search-ville">Ville</label>
+                  <select class="search__select" id="search-ville" name="ville" required disabled data-search-ville>
+                    <option value="">Choisir une ville</option>
+                  </select>
+                </div>
+                <button class="btn btn--primary search__submit" type="submit">Voir le classement</button>
+              </div>
+            </form>
+            <ul class="trust">
+              <li class="trust__item"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-local"></use></svg><span>Professionnels locaux</span></li>
+              <li class="trust__item"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-checklist"></use></svg><span>Critères expliqués</span></li>
+              <li class="trust__item"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-calendar-refresh"></use></svg><span>Mise à jour annuelle</span></li>
+            </ul>
+          </div>
+
+          <!-- ======================================================================
+               HERO STAGE (right column) — animated journey, 10 s loop (GSAP, script.js 3.6)
+               Scene 1  0–2.7 s   search: « Avocats » + « Genève » are typed, button press
+               Scene 2  2.7–4.8 s comparing against the 5 criteria (rows + check marks)
+               Scene 3  4.8–9.3 s the Top 5, three trust chips, contact caption
+               Reset    8.8–10 s  scene 3 fades out while scene 1 fades back in
+               Designed at 500×460; the visible window (--hs-x/y/w/h) is scaled to the
+               column by the tiny inline script below. Without JS or with reduced motion
+               the finished still frame (8.0 s) of « Avocats à Genève » is shown.
+               ====================================================================== -->
+          <div class="hero__visual">
+            <div class="hero-stage" role="img" data-hero-stage
+                 aria-label="Exemple : recherche d'avocats à Genève, comparaison selon 5 critères et classement des 5 professionnels"
+                 style="--hs-x: 0; --hs-y: 0; --hs-w: 500; --hs-h: 460;">
+              <div class="hero-stage__canvas" aria-hidden="true">
+
+                <!-- Scene 1 — the search -->
+                <div class="hero-stage__scene" data-hs="s1">
+                  <div class="hero-stage__tray">
+                    <span class="hero-stage__pill">Tous<span class="hero-stage__pill-on" data-hs="all-on">Tous</span></span>
+                    <span class="hero-stage__pill"><span data-hs-domain>Juridique et finance</span><span class="hero-stage__pill-on" data-hs="dom-on"><span data-hs-domain>Juridique et finance</span></span></span>
+                  </div>
+                  <div class="hero-stage__card hero-stage__search">
+                    <div class="hero-stage__field">
+                      <span class="hero-stage__label">Métier</span>
+                      <span class="hero-stage__value">
+                        <span class="hero-stage__placeholder" data-hs="m-ph">Choisir un métier</span>
+                        <span data-hs="m-text" data-full="Avocats"></span><span class="hero-stage__caret" data-hs="m-caret"></span>
+                      </span>
+                    </div>
+                    <div class="hero-stage__field">
+                      <span class="hero-stage__label">Ville</span>
+                      <span class="hero-stage__value">
+                        <span class="hero-stage__placeholder" data-hs="v-ph">Choisir une ville</span>
+                        <span data-hs="v-text" data-full="Genève"></span><span class="hero-stage__caret" data-hs="v-caret"></span>
+                      </span>
+                    </div>
+                    <span class="hero-stage__btn" data-hs="btn">Voir le classement</span>
+                  </div>
+                </div>
+
+                <!-- Scene 2 — comparing against the 5 criteria -->
+                <div class="hero-stage__scene" data-hs="s2">
+                  <div class="hero-stage__card hero-stage__compare">
+                    <div class="hero-stage__head">
+                      <span class="hero-stage__icon" data-hs-icon><svg class="icon" focusable="false"><use href="#i-scale"></use></svg></span>
+                      <div>
+                        <p class="hero-stage__title" data-hs-title>Avocats à Genève</p>
+                        <p class="hero-stage__sub">5 critères</p>
+                      </div>
+                    </div>
+                    <span class="hero-stage__progress"><span data-hs="progress"></span></span>
+                    <ul class="hero-stage__criteria">
+                      <li data-hs="c1"><svg class="icon hero-stage__cicon" focusable="false"><use href="#i-c-reviews"></use></svg><span>Avis clients</span><svg class="hero-stage__check" viewBox="0 0 24 24" focusable="false"><path data-hs="k1" pathLength="1" d="m5 12.5 4.5 4.5L19 7.5"/></svg></li>
+                      <li data-hs="c2"><svg class="icon hero-stage__cicon" focusable="false"><use href="#i-c-expertise"></use></svg><span>Expertise</span><svg class="hero-stage__check" viewBox="0 0 24 24" focusable="false"><path data-hs="k2" pathLength="1" d="m5 12.5 4.5 4.5L19 7.5"/></svg></li>
+                      <li data-hs="c3"><svg class="icon hero-stage__cicon" focusable="false"><use href="#i-c-reliability"></use></svg><span>Fiabilité</span><svg class="hero-stage__check" viewBox="0 0 24 24" focusable="false"><path data-hs="k3" pathLength="1" d="m5 12.5 4.5 4.5L19 7.5"/></svg></li>
+                      <li data-hs="c4"><svg class="icon hero-stage__cicon" focusable="false"><use href="#i-c-local"></use></svg><span>Présence locale</span><svg class="hero-stage__check" viewBox="0 0 24 24" focusable="false"><path data-hs="k4" pathLength="1" d="m5 12.5 4.5 4.5L19 7.5"/></svg></li>
+                      <li data-hs="c5"><svg class="icon hero-stage__cicon" focusable="false"><use href="#i-c-pricing"></use></svg><span>Transparence tarifaire</span><svg class="hero-stage__check" viewBox="0 0 24 24" focusable="false"><path data-hs="k5" pathLength="1" d="m5 12.5 4.5 4.5L19 7.5"/></svg></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Scene 3 — the Top 5 (skeleton bars: no company names exist yet) -->
+                <div class="hero-stage__scene" data-hs="s3">
+                  <div class="hero-stage__card hero-stage__ranking">
+                    <div class="hero-stage__head">
+                      <span class="hero-stage__icon" data-hs-icon><svg class="icon" focusable="false"><use href="#i-scale"></use></svg></span>
+                      <p class="hero-stage__title" data-hs-title>Avocats à Genève</p>
+                    </div>
+                    <ol class="hero-stage__top">
+                      <li data-hs="r1"><span class="hero-stage__tint" data-hs="tint"></span><span class="hero-stage__rank"><span class="hero-stage__marker" data-hs="marker"></span><b>1</b></span><span class="hero-stage__bars"><span style="--w: 72%"></span><span style="--w: 46%"></span></span><span class="hero-stage__dots"><i></i><i></i><i></i><i></i><i></i></span></li>
+                      <li data-hs="r2"><span class="hero-stage__rank"><b>2</b></span><span class="hero-stage__bars"><span style="--w: 64%"></span><span style="--w: 52%"></span></span><span class="hero-stage__dots"><i></i><i></i><i></i><i></i><i></i></span></li>
+                      <li data-hs="r3"><span class="hero-stage__rank"><b>3</b></span><span class="hero-stage__bars"><span style="--w: 80%"></span><span style="--w: 38%"></span></span><span class="hero-stage__dots"><i></i><i></i><i></i><i></i><i></i></span></li>
+                      <li data-hs="r4"><span class="hero-stage__rank"><b>4</b></span><span class="hero-stage__bars"><span style="--w: 58%"></span><span style="--w: 44%"></span></span><span class="hero-stage__dots"><i></i><i></i><i></i><i></i><i></i></span></li>
+                      <li data-hs="r5"><span class="hero-stage__rank"><b>5</b></span><span class="hero-stage__bars"><span style="--w: 68%"></span><span style="--w: 34%"></span></span><span class="hero-stage__dots"><i></i><i></i><i></i><i></i><i></i></span></li>
+                    </ol>
+                  </div>
+                  <span class="hero-stage__chip hero-stage__chip--a" data-hs="chipA"><svg class="icon" focusable="false"><use href="#i-local"></use></svg>Professionnels locaux</span>
+                  <span class="hero-stage__chip hero-stage__chip--b" data-hs="chipB"><svg class="icon" focusable="false"><use href="#i-checklist"></use></svg>Critères expliqués</span>
+                  <span class="hero-stage__chip hero-stage__chip--c" data-hs="chipC"><svg class="icon" focusable="false"><use href="#i-calendar-refresh"></use></svg>Mise à jour annuelle</span>
+                  <p class="hero-stage__caption" data-hs="caption"><svg class="icon" focusable="false"><use href="#i-mail"></use></svg><span>Vous contactez directement les professionnels qui vous intéressent</span></p>
+                </div>
+              </div>
+            </div>
+            <!-- Scales the 500×460 design to the column width (runs before first paint). -->
+            <script>
+              (function (stage) {
+                function fit() {
+                  var w = parseFloat(getComputedStyle(stage).getPropertyValue('--hs-w')) || 500;
+                  stage.style.setProperty('--hs-scale', stage.clientWidth / w);
+                }
+                fit();
+                if ('ResizeObserver' in window) new ResizeObserver(fit).observe(stage);
+                else window.addEventListener('resize', fit);
+              })(document.currentScript.previousElementSibling);
+            </script>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BLOCK 2 — PROFESSIONS: domain filter (+ arrows at its end) + card slider
+         Cards are rendered from DOMAINS + PROFESSIONS in script.js.
+         ========================================================================== -->
+    <section class="section section--white section--bleed" id="metiers" aria-labelledby="metiers-title" data-pro-browser>
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div class="section-head__main">
+            <p class="section-head__eyebrow">Tous nos métiers, classés par domaine.</p>
+            <h2 class="section-head__title" id="metiers-title">Trouvez un professionnel par métier</h2>
+          </div>
+          <div class="section-head__aside">
+            <p class="section-head__text">Que vous cherchiez un conseil juridique, une aide pour votre comptabilité ou une entreprise pour vos travaux, commencez par choisir le domaine qui correspond à votre projet, puis le métier. Chaque page métier explique le rôle du professionnel, ses prestations et les prix pratiqués, puis vous guide vers les classements de votre ville.</p>
+          </div>
+        </header>
+
+        <!-- Filter row: domain chips (injected by script.js) + slider arrows, right-aligned. -->
+        <div class="filter-row">
+          <div class="filter" role="group" aria-label="Filtrer par domaine" data-pro-filter></div>
+          <div class="slider-arrows slider-arrows--end">
+            <button class="slider-arrows__btn" type="button" aria-label="Précédent" aria-controls="pro-track" data-slider-prev><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-left"></use></svg></button>
+            <button class="slider-arrows__btn" type="button" aria-label="Suivant" aria-controls="pro-track" data-slider-next><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></button>
+          </div>
+        </div>
+
+        <!-- Selected domain: H3 + description (hidden while « Tous » is active). -->
+        <div class="pro-intro" data-pro-intro></div>
+
+        <!-- Slider: starts on the content edge, loops endlessly. tabindex="0" = arrow-key scrolling. -->
+        <div class="loop-slider">
+          <ul class="loop-slider__track" id="pro-track" tabindex="0" aria-labelledby="metiers-title" data-slider-track></ul>
+        </div>
+
+        <noscript>
+          <ul class="noscript-list">
+            <li><a href="/avocat/">Avocats</a></li>
+            <li><a href="/fiduciaire/">Fiduciaires</a></li>
+            <li><a href="/architecte/">Architectes</a></li>
+            <li><a href="/sanitaire/">Sanitaires</a></li>
+            <li><a href="/paysagiste/">Paysagistes</a></li>
+          </ul>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BLOCK 3 — SELECTION CRITERIA: 5 columns with refined line icons
+         ========================================================================== -->
+    <section class="section section--cream" aria-labelledby="criteres-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div class="section-head__main">
+            <p class="section-head__eyebrow">Cinq critères pour comparer les professionnels.</p>
+            <h2 class="section-head__title" id="criteres-title">Nos critères de sélection</h2>
+          </div>
+          <div class="section-head__aside">
+            <p class="section-head__text">Pour chaque ville et chaque métier, nous comparons les professionnels à partir d'informations publiques et vérifiables : avis clients, registres officiels, sites des entreprises. Les cinq critères ci-dessous servent de base à tous nos classements. Ils vous aident aussi à savoir quoi vérifier avant de contacter un professionnel près de chez vous.</p>
+            <a class="btn btn--primary section-head__cta" href="/methodologie/">Découvrir notre méthodologie</a>
+          </div>
+        </header>
+
+        <ul class="criteria" data-reveal>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reviews"></use></svg></span>
+            <h3 class="criterion__title">Avis clients</h3>
+            <p class="criterion__lead">Ce que disent les clients</p>
+            <p class="criterion__text">La note moyenne et le nombre d'avis Google publics de chaque entreprise.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-expertise"></use></svg></span>
+            <h3 class="criterion__title">Expertise</h3>
+            <p class="criterion__lead">Compétences et spécialisations</p>
+            <p class="criterion__text">Les domaines pratiqués, les titres et les certifications reconnus dans le métier.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reliability"></use></svg></span>
+            <h3 class="criterion__title">Fiabilité</h3>
+            <p class="criterion__lead">Une entreprise établie</p>
+            <p class="criterion__text">Les années d'activité et l'inscription au registre du commerce ou au registre professionnel.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-local"></use></svg></span>
+            <h3 class="criterion__title">Présence locale</h3>
+            <p class="criterion__lead">Un ancrage réel</p>
+            <p class="criterion__text">Un bureau dans la ville concernée ou dans le canton, pour des interventions de proximité.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-pricing"></use></svg></span>
+            <h3 class="criterion__title">Transparence tarifaire</h3>
+            <p class="criterion__lead">Des prix clairs</p>
+            <p class="criterion__text">Des tarifs, forfaits ou conditions publiés, lorsque le métier le permet.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BLOCK 4 — MOST VIEWED RANKINGS: card slider, arrows centred under the cards
+         (cards rendered from POPULAR_RANKINGS in script.js)
+         ========================================================================== -->
+    <section class="section section--white section--bleed" aria-labelledby="classements-title" data-rank-slider>
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div class="section-head__main">
+            <p class="section-head__eyebrow">Les comparatifs que nos visiteurs ouvrent le plus souvent.</p>
+            <h2 class="section-head__title" id="classements-title">Les classements les plus consultés</h2>
+          </div>
+          <div class="section-head__aside">
+            <p class="section-head__text">Vous ne savez pas par où commencer ? Voici les comparatifs les plus consultés sur Guide Romand, tous métiers et toutes villes confondus. Chaque classement présente toujours cinq professionnels et indique sa date de mise à jour et le nombre d'entreprises analysées, pour que vous sachiez d'un coup d'œil s'il est récent.</p>
+          </div>
+        </header>
+
+        <!-- Arrows at the end of a row above the cards (same position as Block 2). -->
+        <div class="filter-row filter-row--end">
+          <div class="slider-arrows slider-arrows--end">
+            <button class="slider-arrows__btn" type="button" aria-label="Précédent" aria-controls="rank-track" data-rank-prev><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-left"></use></svg></button>
+            <button class="slider-arrows__btn" type="button" aria-label="Suivant" aria-controls="rank-track" data-rank-next><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></button>
+          </div>
+        </div>
+
+        <div class="loop-slider">
+          <ul class="loop-slider__track" id="rank-track" tabindex="0" aria-labelledby="classements-title" data-rank-track></ul>
+        </div>
+
+        <noscript>
+          <ul class="noscript-list">
+            <li><a href="/sanitaire/lausanne/">Sanitaires à Lausanne</a></li>
+            <li><a href="/sanitaire/nyon/">Sanitaires à Nyon</a></li>
+            <li><a href="/paysagiste/lausanne/">Paysagistes à Lausanne</a></li>
+            <li><a href="/fiduciaire/nyon/">Fiduciaires à Nyon</a></li>
+            <li><a href="/avocat/geneve/">Avocats à Genève</a></li>
+            <li><a href="/avocat/neuchatel/">Avocats à Neuchâtel</a></li>
+            <li><a href="/avocat/fribourg/">Avocats à Fribourg</a></li>
+            <li><a href="/architecte/lausanne/">Architectes à Lausanne</a></li>
+            <li><a href="/architecte/geneve/">Architectes à Genève</a></li>
+          </ul>
+        </noscript>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BLOCK 5 — FAQ (native <details>/<summary> accordions, each one a card)
+         ========================================================================== -->
+    <section class="section section--cream" aria-labelledby="faq-title">
+      <div class="container">
+        <!-- Two columns: heading (left) · questions (right) -->
+        <div class="faq-layout">
+          <header class="section-head section-head--stack" data-reveal>
+            <div class="section-head__main">
+              <p class="section-head__eyebrow">Ce qu'il faut savoir avant de choisir.</p>
+              <h2 class="section-head__title" id="faq-title">Questions fréquentes</h2>
+            </div>
+            <div class="section-head__aside">
+              <p class="section-head__text">Vous découvrez Guide Romand ? Voici les réponses aux questions que l'on nous pose le plus souvent : comment nous choisissons les professionnels, ce que coûte le service et quelles villes nous couvrons. Si votre question n'y figure pas, écrivez-nous via notre</p>
+              <a class="btn btn--primary section-head__cta" href="/contact/">Formulaire de contact</a>
+            </div>
+          </header>
+
+          <div class="faq" data-reveal>
+            <details class="faq__item" name="faq">
+              <summary class="faq__summary">
+                <h3 class="faq__question">Qu'est-ce que Guide Romand ?</h3>
+                <span class="faq__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/><path class="faq__icon-v" d="M12 5v14"/></svg></span>
+              </summary>
+              <div class="faq__answer">
+                <p>Guide Romand est un guide en ligne qui compare les professionnels de Suisse romande, métier par métier et ville par ville. Pour chaque comparatif, nous présentons cinq entreprises avec leurs spécialités, leurs avis clients et les informations utiles pour les contacter.</p>
+              </div>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary class="faq__summary">
+                <h3 class="faq__question">Comment les professionnels sont-ils sélectionnés ?</h3>
+                <span class="faq__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/><path class="faq__icon-v" d="M12 5v14"/></svg></span>
+              </summary>
+              <div class="faq__answer">
+                <p>Nous partons d'informations publiques : registre du commerce, registres professionnels, avis Google et sites des entreprises. Les professionnels sont ensuite comparés selon cinq critères : avis clients, expertise, fiabilité, présence locale et transparence tarifaire. Notre méthodologie détaille chaque étape.</p>
+              </div>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary class="faq__summary">
+                <h3 class="faq__question">Le service est-il payant pour les particuliers ?</h3>
+                <span class="faq__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/><path class="faq__icon-v" d="M12 5v14"/></svg></span>
+              </summary>
+              <div class="faq__answer">
+                <p>Non. La consultation de Guide Romand est gratuite et ne demande aucune inscription. Vous contactez directement les professionnels qui vous intéressent, sans intermédiaire et sans frais supplémentaires.</p>
+              </div>
+            </details>
+            <details class="faq__item" name="faq">
+              <summary class="faq__summary">
+                <h3 class="faq__question">Quelles villes couvrez-vous ?</h3>
+                <span class="faq__icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" focusable="false"><path d="M5 12h14"/><path class="faq__icon-v" d="M12 5v14"/></svg></span>
+              </summary>
+              <div class="faq__answer">
+                <p>Nous couvrons aujourd'hui Lausanne, Genève, Neuchâtel, Fribourg et Nyon. D'autres villes et d'autres métiers de Suisse romande seront ajoutés progressivement au guide.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CLOSING BLOCK — the CTA (here) and the footer (right after </main>) share one
+         navy rounded container: the CTA rounds the top corners, the footer the bottom.
+         ========================================================================== -->
+    <section class="section closing closing--top" aria-labelledby="pro-title">
+      <div class="container">
+        <header class="section-head section-head--on-dark cta" data-reveal>
+          <div class="section-head__main">
+            <h2 class="section-head__title" id="pro-title">Vous êtes un professionnel en Suisse romande ?</h2>
+          </div>
+          <div class="section-head__aside">
+            <p class="section-head__text">Découvrez comment figurer dans nos comparatifs ou demander la correction de vos informations.</p>
+            <a class="btn btn--primary section-head__cta" href="/entreprises/">Pour les professionnels</a>
+          </div>
+        </header>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER — second half of the navy closing block
+       ========================================================================== -->
+  <footer class="site-footer closing closing--bottom">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="site-footer__logo" href="/">
+            <!-- Light logo for the navy footer (white + yellow version of the brand file). -->
+            <picture>
+              <source type="image/webp" srcset="images/logo-guideromand-light.webp">
+              <img src="images/logo-guideromand-light.png" alt="GuideRomand.ch" width="1005" height="170" loading="lazy" decoding="async">
+            </picture>
+          </a>
+          <p class="site-footer__slogan">Guide Romand - Votre annuaire des entreprises en Suisse Romande</p>
+        </div>
+
+        <nav class="footer-nav" aria-labelledby="footer-confiance">
+          <p class="footer-nav__title" id="footer-confiance">Confiance</p>
+          <ul class="footer-nav__list">
+            <li><a href="/a-propos/">À propos</a></li>
+            <li><a href="/methodologie/">Méthodologie</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/plan-du-site/">Plan du site</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-labelledby="footer-metiers">
+          <p class="footer-nav__title" id="footer-metiers">Métiers</p>
+          <!-- Filled from PROFESSIONS by script.js (static list kept as no-JS fallback). -->
+          <ul class="footer-nav__list" data-footer-professions>
+            <li><a href="/avocat/">Avocats</a></li>
+            <li><a href="/fiduciaire/">Fiduciaires</a></li>
+            <li><a href="/architecte/">Architectes</a></li>
+            <li><a href="/sanitaire/">Sanitaires</a></li>
+            <li><a href="/paysagiste/">Paysagistes</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav" aria-labelledby="footer-legal">
+          <p class="footer-nav__title" id="footer-legal">Professionnels &amp; légal</p>
+          <ul class="footer-nav__list">
+            <li><a href="/entreprises/">Pour les professionnels</a></li>
+            <li><a href="/mentions-legales/">Mentions légales</a></li>
+            <li><a href="/politique-de-confidentialite/">Politique de confidentialité</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span data-year>2026</span> Guide Romand · Édité par Flash Design Sàrl</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Structured data: FAQ (mirrors the visible answers word for word). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce que Guide Romand ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Guide Romand est un guide en ligne qui compare les professionnels de Suisse romande, métier par métier et ville par ville. Pour chaque comparatif, nous présentons cinq entreprises avec leurs spécialités, leurs avis clients et les informations utiles pour les contacter." }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment les professionnels sont-ils sélectionnés ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nous partons d'informations publiques : registre du commerce, registres professionnels, avis Google et sites des entreprises. Les professionnels sont ensuite comparés selon cinq critères : avis clients, expertise, fiabilité, présence locale et transparence tarifaire. Notre méthodologie détaille chaque étape." }
+      },
+      {
+        "@type": "Question",
+        "name": "Le service est-il payant pour les particuliers ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Non. La consultation de Guide Romand est gratuite et ne demande aucune inscription. Vous contactez directement les professionnels qui vous intéressent, sans intermédiaire et sans frais supplémentaires." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelles villes couvrez-vous ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nous couvrons aujourd'hui Lausanne, Genève, Neuchâtel, Fribourg et Nyon. D'autres villes et d'autres métiers de Suisse romande seront ajoutés progressivement au guide." }
+      }
+    ]
+  }
+  </script>
+</body>
+</html>

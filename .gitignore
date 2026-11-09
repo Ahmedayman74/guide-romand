@@ -1,0 +1,9 @@
+# Not part of the website
+logos-needed.csv
+block4/
+start-local-server.bat
+
+# System files
+Thumbs.db
+desktop.ini
+.DS_Store
