@@ -1167,6 +1167,31 @@
     });
   }
 
+  /* ---- 4.5b CTA: right column hugs the content's right edge -------------
+     The description keeps left-aligned text; its box is narrowed to its widest
+     line so the block's right edge (text included) sits on the content edge. */
+  function initCtaFit() {
+    const texts = [...document.querySelectorAll('.cta > .section-head__aside .section-head__text')];
+    if (!texts.length) return;
+    const wide = window.matchMedia('(min-width: 960px)');
+    const fit = () => {
+      texts.forEach((p) => {
+        p.style.width = '';
+        if (!wide.matches) return;
+        const range = document.createRange();
+        range.selectNodeContents(p);
+        const left = p.getBoundingClientRect().left;
+        let max = 0;
+        for (const r of range.getClientRects()) max = Math.max(max, r.right - left);
+        if (max > 0) p.style.width = Math.ceil(max + 1) + 'px';
+      });
+    };
+    let t;
+    window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(fit, 120); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    fit();
+  }
+
   /* ---- 4.6 Current year in the footer ---------------------------------- */
   function initYear() {
     const year = $('[data-year]');
@@ -1188,5 +1213,6 @@
   initReveal();
   initFaq();
   initContactForm();
+  initCtaFit();
   initYear();
 })();

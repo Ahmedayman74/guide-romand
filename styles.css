@@ -1568,7 +1568,8 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
   text-wrap: balance;
 }
 @media (min-width: 960px) {
-  .cta--balanced { align-items: center; }
+  .cta--balanced { align-items: start; }      /* title lines up with the top of the description */
+  .cta--two-lines .section-head__title { max-width: calc(var(--cta-ch, 14) * 1ch); }   /* title on 2 balanced lines */
   /* Several buttons (À propos): title left, the buttons in one row on the right */
   .cta--actions { grid-template-columns: minmax(0, 1fr) auto; column-gap: clamp(3rem, 1rem + 4vw, 6rem); }
   .cta--actions .cta-group { flex-wrap: nowrap; margin-top: 0; }
@@ -1583,9 +1584,9 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
 /* Every CTA (homepage + inner pages): description and button pushed to the right edge
    of the content; same split layout and gap. */
 @media (min-width: 960px) {
-  .cta > .section-head__aside { justify-self: end; display: flex; flex-direction: column; align-items: flex-end; }
+  /* The block hugs the right edge; inside it, text and button stay left-aligned */
+  .cta > .section-head__aside { justify-self: end; display: flex; flex-direction: column; align-items: flex-start; }
   .cta > .section-head__aside > * { max-width: 100%; }
-  .cta > .section-head__aside .section-head__text { text-align: end; }   /* lines end on the content's right edge */
 }
 .section-head--on-dark .closing__meta { margin-top: 1rem; color: var(--on-navy-muted); }
 .section-head--on-dark .closing__meta strong { color: var(--white); font-weight: 600; }
