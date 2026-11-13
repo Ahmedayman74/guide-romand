@@ -1644,72 +1644,87 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
 .g-attrib__logo { width: auto; height: 17px; }
 .rank-card__score { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; color: var(--navy); }
 
-/* ---- Company card (all comparison pages) ----
-   Logo square (rank badge on its corner) · name, stars, text, info row, points · white side box */
-.company-card { row-gap: 1.5rem; }
+/* ---- City pages: Top 5 section closer to the hero; Top 5 and « Comparatif » titles on one line,
+   with little space under them (the comparison table sits right under its title) ---- */
+.section--top5 { padding-top: clamp(2rem, 1.5rem + 1.5vw, 3rem); }
+.section-head--one-line { display: block; margin-bottom: clamp(1.25rem, 1rem + 1vw, 2rem); }
+.section-head--one-line .section-head__title { max-width: none; }
+@media (min-width: 900px) {   /* the longest titles still fit on one line on laptops */
+  .section-head--one-line .section-head__title { font-size: min(var(--fs-h2), 3.3vw, 2.625rem); }
+}
+
+/* ---- Company card (all comparison pages), compact ----
+   Logo square (rank badge on its corner) · name · stars + founded + registered on one line ·
+   text · « Points forts » on one line · « Visiter le site » for partners only */
+.ranking--compact { gap: 1rem; }
+.company-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+  align-items: start;
+  padding: clamp(1.25rem, 1rem + 0.75vw, 1.75rem);
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+}
 @media (min-width: 900px) {
-  .company-card { grid-template-columns: auto minmax(0, 1fr) minmax(240px, 300px); column-gap: clamp(1.5rem, 0.5rem + 2vw, 2.5rem); }
-  .company-card .rank-card__aside { align-self: center; }       /* side box centred against the left part */
+  .company-card--partner { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .company-card__action { align-self: center; }
 }
 .company-logo {
   position: relative;
   display: grid;
   place-items: center;
-  width: 104px;
-  height: 104px;
-  padding: 10px;
+  width: 72px;
+  height: 72px;
+  padding: 8px;
   background: var(--white);
   border-radius: var(--radius);
 }
 .company-logo--dark { background: var(--navy); }                 /* logos drawn in white */
 .company-logo img { width: 100%; height: 100%; object-fit: contain; }
-.company-logo__initials { font-size: 1.75rem; font-weight: 700; letter-spacing: 0.02em; color: var(--navy); }
 .company-logo__rank {                                            /* rank: small navy badge on the logo's corner */
   position: absolute;
-  top: -10px;
-  left: -10px;
+  top: -8px;
+  left: -8px;
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
-  font-size: 0.9375rem;
+  width: 26px;
+  height: 26px;
+  font-size: 0.8125rem;
   font-weight: 700;
   color: var(--white);
   background: var(--navy);
   border-radius: 50%;
-  box-shadow: 0 0 0 3px var(--cream);                            /* keeps the badge apart from the logo square */
+  box-shadow: 0 0 0 3px var(--cream);
 }
-.company-card__name { font-size: clamp(1.5rem, 1.3rem + 0.7vw, 2rem); letter-spacing: -0.02em; }
-.company-card__rating { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; margin-top: 0.625rem; color: var(--slate); }
+.company-card__name { font-size: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem); line-height: 1.25; letter-spacing: -0.015em; }
+.company-card__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.75rem; margin-top: 0.5rem; }
+.company-card__rating { display: flex; flex-wrap: wrap; align-items: center; gap: 0.375rem 0.625rem; color: var(--slate); }
 .company-card__rating .stars { margin: 0; }
 .company-card__rating strong { color: var(--navy); font-weight: 600; }
-.company-card .rank-card__text { margin-top: 1rem; }
-.company-card__info { display: flex; flex-wrap: wrap; gap: 0.75rem 2.5rem; margin: 1.25rem 0 0; }
+.company-card__info { display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; margin: 0; }
 .company-card__info > div { display: flex; align-items: center; gap: 0.5rem; }
 .company-card__info dt { font-size: 0.9375rem; color: var(--slate); }
 .company-card__info dd { margin: 0; font-weight: 600; color: var(--navy); }
-.company-card__points { margin-top: 1.5rem; }
-.company-card .rank-card__label { margin-top: 0; }
-.company-card .rank-card__points li { align-items: flex-start; }
-.company-card .rank-card__points .icon { margin-top: 0.15em; }
-.company-card .rank-card__aside { padding: 1.5rem; }
-.company-card .rank-card__rating .stars { margin: 0.625rem 0 0; }
+.company-card__text { max-width: 80ch; margin-top: 0.75rem; color: var(--slate); }
+.company-card__points { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.375rem 1.25rem; margin-top: 0.75rem; }
+.company-card__label { font-weight: 600; color: var(--navy); }
+.company-card__points ul { display: contents; margin: 0; padding: 0; list-style: none; }   /* items flow right after the label */
+.company-card__points li { display: flex; align-items: center; gap: 0.375rem; color: var(--navy); }
+.company-card__points .icon { width: 18px; height: 18px; flex-shrink: 0; }
+.company-card__action .btn { white-space: nowrap; }
 @media (max-width: 899px) {
-  .company-card { grid-template-columns: auto minmax(0, 1fr); column-gap: 1.25rem; }
-  .company-card .rank-card__main { display: contents; }
-  .company-card .company-card__name { align-self: center; }
-  .company-card .company-card__rating,
-  .company-card .rank-card__text,
-  .company-card .company-card__info,
-  .company-card .company-card__points,
-  .company-card .rank-card__aside { grid-column: 1 / -1; }
-  .company-card .company-card__rating { margin-top: -0.75rem; }
-  .company-card .rank-card__text,
-  .company-card .company-card__info,
-  .company-card .company-card__points { margin-top: -0.25rem; }
+  .company-card__action { grid-column: 1 / -1; }
+  .company-card__action .btn { width: 100%; }
 }
 @media (max-width: 559px) {
-  .company-logo { width: 80px; height: 80px; padding: 8px; }
+  .company-card { column-gap: 1rem; }
+  .company-logo { width: 56px; height: 56px; padding: 6px; }
+  .company-card__body { display: contents; }
+  .company-card__name { align-self: center; }
+  .company-card__meta, .company-card__text, .company-card__points { grid-column: 1 / -1; margin-top: 0; }
+  .company-card__points { flex-direction: column; align-items: flex-start; }
 }
 .rank-card__aside .btn { width: 100%; }
 

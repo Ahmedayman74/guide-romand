@@ -128,6 +128,18 @@
     <symbol id="i-t-tree" viewBox="0 0 24 24"><path d="M12 21v-6.5M12 17l-3-2.5M12 15.5l2.5-2"/><path d="M8 14.5a4.5 4.5 0 0 1-.8-8.9A5 5 0 0 1 16.8 5.6 4.5 4.5 0 0 1 16 14.5Z"/></symbol>
     <symbol id="i-t-scissors" viewBox="0 0 24 24"><circle cx="6.5" cy="7" r="2.5"/><circle cx="6.5" cy="17" r="2.5"/><path d="M8.6 8.4 20 17M8.6 15.6 20 7"/></symbol>
     <symbol id="i-t-sprinkler" viewBox="0 0 24 24"><path d="M12 9.5s3.5 3.7 3.5 6.3a3.5 3.5 0 0 1-7 0c0-2.6 3.5-6.3 3.5-6.3Z"/><path d="M5 9a8.5 8.5 0 0 1 3.2-3.6M19 9a8.5 8.5 0 0 0-3.2-3.6M10 3.6a8.5 8.5 0 0 1 4 0"/></symbol>
+    <symbol id="i-a-01" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 1 0 18ZM3 3a9 9 0 0 1 0 18M3 3v18"/></symbol>
+    <symbol id="i-a-02" viewBox="0 0 24 24"><path d="M3 12 12 3l9 9ZM12 12l-9 9h18Z"/></symbol>
+    <symbol id="i-a-03" viewBox="0 0 24 24"><path d="M3 3h18v18H3ZM12 3l9 9-9 9-9-9Z"/></symbol>
+    <symbol id="i-a-04" viewBox="0 0 24 24"><path d="M3 3 12 12 3 21ZM21 3l-9 9 9 9Z"/></symbol>
+    <symbol id="i-a-05" viewBox="0 0 24 24"><path d="M3 21A18 18 0 0 1 21 3 18 18 0 0 1 3 21Z"/></symbol>
+    <symbol id="i-a-06" viewBox="0 0 24 24"><path d="M3 3h12v12H3Z"/><circle cx="15" cy="15" r="6"/></symbol>
+    <symbol id="i-a-07" viewBox="0 0 24 24"><circle cx="7.5" cy="7.5" r="4.5"/><circle cx="16.5" cy="7.5" r="4.5"/><circle cx="7.5" cy="16.5" r="4.5"/><circle cx="16.5" cy="16.5" r="4.5"/></symbol>
+    <symbol id="i-a-08" viewBox="0 0 24 24"><path d="M3 21v-6h6V9h6V3h6v18Z"/></symbol>
+    <symbol id="i-a-09" viewBox="0 0 24 24"><path d="M3 15a9 9 0 0 1 18 0ZM7.5 15a4.5 4.5 0 0 1 9 0M3 19h18"/></symbol>
+    <symbol id="i-a-10" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0ZM3 12l9 9 9-9"/></symbol>
+    <symbol id="i-a-11" viewBox="0 0 24 24"><path d="M5 21V11a7 7 0 0 1 14 0v10ZM9.5 21v-8.5a2.5 2.5 0 0 1 5 0V21"/></symbol>
+    <symbol id="i-a-12" viewBox="0 0 24 24"><path d="M3 3h18v18H3ZM3 3l18 18M12 3l9 9M3 12l9 9"/></symbol>
   </svg>
 
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -219,158 +231,109 @@
       </div>
     </section>
 
-    <!-- BLOC 3 — Top 5 (company data is dynamic; partners come from « Client Flash #1–#5 ») -->
-    <section class="section section--white" aria-labelledby="top-title">
+    <!-- BLOC 3 — Top 5: one compact card per company.
+         Partners (Google Sheet « Client Flash #1–#5 ») get a DoFollow « Visiter le site » link; the others no link. -->
+    <section class="section section--white section--top5" aria-labelledby="top-title">
       <div class="container">
-        <header class="section-head" data-reveal>
+        <header class="section-head section-head--one-line" data-reveal>
           <div class="section-head__main">
             <h2 class="section-head__title" id="top-title">Top 5 des meilleurs avocats à Fribourg</h2>
           </div>
         </header>
-        <ol class="ranking">
-          <!-- organic: rel="nofollow" -->
-          <li class="rank-card company-card" data-reveal>
+        <ol class="ranking ranking--compact">
+          <!-- not a partner: no link -->
+          <li class="company-card" data-reveal>
             <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">1</span></div>
-            <div class="rank-card__main">
-              <h3 class="rank-card__title company-card__name"><span class="visually-hidden">1. </span>Étude Séverine Monferini Nuoffer</h3>
-              <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 5 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-              <p class="rank-card__text">Étude de Me Séverine Monferini Nuoffer, avocate spécialiste FSA en responsabilité civile et droit des assurances, inscrite au registre fribourgeois des avocats depuis 1996. Elle reçoit particuliers et entreprises à la rue des Alpes, en français, en italien et en allemand.</p>
-              <dl class="company-card__info">
-                <div><dt>Fondée en :</dt><dd>1996 (registre des avocats)</dd></div>
-                <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-              </dl>
+            <div class="company-card__body">
+              <h3 class="company-card__name"><span class="visually-hidden">1. </span>Étude Séverine Monferini Nuoffer</h3>
+              <div class="company-card__meta">
+                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 5 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                <dl class="company-card__info">
+                  <div><dt>Fondée en :</dt><dd>1996 (registre des avocats)</dd></div>
+                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
+                </dl>
+              </div>
+              <p class="company-card__text">Étude de Me Séverine Monferini Nuoffer, avocate spécialiste FSA en responsabilité civile et droit des assurances, inscrite au registre fribourgeois des avocats depuis 1996. Elle reçoit particuliers et entreprises à la rue des Alpes, en français, en italien et en allemand.</p>
               <div class="company-card__points">
-                <p class="rank-card__label">Points forts :</p>
-                <ul class="rank-card__points">
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Avocate spécialiste FSA en responsabilité civile et droit des assurances</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit de la famille, droit pénal et contrats</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Conseils en français, en italien et en allemand</span></li>
-                </ul>
+                <p class="company-card__label">Points forts :</p>
+                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Avocate spécialiste FSA en responsabilité civile et droit des assurances</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit de la famille, droit pénal et contrats</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Conseils en français, en italien et en allemand</span></li></ul>
               </div>
-            </div>
-            <div class="rank-card__aside">
-              <div class="rank-card__rating">
-                <p class="rank-card__rating-head"><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span><strong>Avis Google :</strong></p>
-                <p><span class="rank-card__score">5,0/5</span>, 5 avis Google</p>
-                <span class="stars" style="--rating: 5.0" aria-hidden="true"></span>
-              </div>
-              <a class="btn btn--primary" href="https://www.avocate-alpesfr.ch/" rel="nofollow noopener">Visiter le site</a>
             </div>
           </li>
-          <!-- organic: rel="nofollow" -->
-          <li class="rank-card company-card" data-reveal>
+          <!-- not a partner: no link -->
+          <li class="company-card" data-reveal>
             <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">2</span></div>
-            <div class="rank-card__main">
-              <h3 class="rank-card__title company-card__name"><span class="visually-hidden">2. </span>MBP Avocats</h3>
-              <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 6 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-              <p class="rank-card__text">Étude fondée en 2008, installée rue Hans-Fries, à Fribourg. Ses avocats pratiquent le droit pénal, le droit de la famille et le droit des contrats et des sociétés.</p>
-              <dl class="company-card__info">
-                <div><dt>Fondée en :</dt><dd>2008</dd></div>
-                <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-              </dl>
+            <div class="company-card__body">
+              <h3 class="company-card__name"><span class="visually-hidden">2. </span>MBP Avocats</h3>
+              <div class="company-card__meta">
+                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 6 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                <dl class="company-card__info">
+                  <div><dt>Fondée en :</dt><dd>2008</dd></div>
+                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
+                </dl>
+              </div>
+              <p class="company-card__text">Étude fondée en 2008, installée rue Hans-Fries, à Fribourg. Ses avocats pratiquent le droit pénal, le droit de la famille et le droit des contrats et des sociétés.</p>
               <div class="company-card__points">
-                <p class="rank-card__label">Points forts :</p>
-                <ul class="rank-card__points">
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit pénal</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit de la famille</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit des contrats et des sociétés</span></li>
-                </ul>
+                <p class="company-card__label">Points forts :</p>
+                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit pénal</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit de la famille</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit des contrats et des sociétés</span></li></ul>
               </div>
-            </div>
-            <div class="rank-card__aside">
-              <div class="rank-card__rating">
-                <p class="rank-card__rating-head"><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span><strong>Avis Google :</strong></p>
-                <p><span class="rank-card__score">5,0/5</span>, 6 avis Google</p>
-                <span class="stars" style="--rating: 5.0" aria-hidden="true"></span>
-              </div>
-              <a class="btn btn--primary" href="https://www.mbpavocats.ch/" rel="nofollow noopener">Visiter le site</a>
             </div>
           </li>
-          <!-- organic: rel="nofollow" -->
-          <li class="rank-card company-card" data-reveal>
+          <!-- not a partner: no link -->
+          <li class="company-card" data-reveal>
             <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">3</span></div>
-            <div class="rank-card__main">
-              <h3 class="rank-card__title company-card__name"><span class="visually-hidden">3. </span>Schneuwly-Sahli SA</h3>
-              <p class="company-card__rating"><span class="stars" style="--rating: 4.4" aria-hidden="true"></span><span><strong>4,4/5</strong> · 7 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-              <p class="rank-card__text">Étude fondée en 1990, installée à la rue de Romont, à Fribourg. Elle pratique le droit de la construction, le droit des sociétés et des contrats, ainsi que la responsabilité civile.</p>
-              <dl class="company-card__info">
-                <div><dt>Fondée en :</dt><dd>1990</dd></div>
-                <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-              </dl>
+            <div class="company-card__body">
+              <h3 class="company-card__name"><span class="visually-hidden">3. </span>Schneuwly-Sahli SA</h3>
+              <div class="company-card__meta">
+                <p class="company-card__rating"><span class="stars" style="--rating: 4.4" aria-hidden="true"></span><span><strong>4,4/5</strong> · 7 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                <dl class="company-card__info">
+                  <div><dt>Fondée en :</dt><dd>1990</dd></div>
+                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
+                </dl>
+              </div>
+              <p class="company-card__text">Étude fondée en 1990, installée à la rue de Romont, à Fribourg. Elle pratique le droit de la construction, le droit des sociétés et des contrats, ainsi que la responsabilité civile.</p>
               <div class="company-card__points">
-                <p class="rank-card__label">Points forts :</p>
-                <ul class="rank-card__points">
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit de la construction et de l'aménagement</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit des sociétés et des contrats</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Responsabilité civile</span></li>
-                </ul>
+                <p class="company-card__label">Points forts :</p>
+                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit de la construction et de l'aménagement</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit des sociétés et des contrats</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Responsabilité civile</span></li></ul>
               </div>
-            </div>
-            <div class="rank-card__aside">
-              <div class="rank-card__rating">
-                <p class="rank-card__rating-head"><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span><strong>Avis Google :</strong></p>
-                <p><span class="rank-card__score">4,4/5</span>, 7 avis Google</p>
-                <span class="stars" style="--rating: 4.4" aria-hidden="true"></span>
-              </div>
-              <a class="btn btn--primary" href="https://www.avocat-fribourg.ch/" rel="nofollow noopener">Visiter le site</a>
             </div>
           </li>
-          <!-- organic: rel="nofollow" -->
-          <li class="rank-card company-card" data-reveal>
+          <!-- not a partner: no link -->
+          <li class="company-card" data-reveal>
             <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">4</span></div>
-            <div class="rank-card__main">
-              <h3 class="rank-card__title company-card__name"><span class="visually-hidden">4. </span>Avocats Associés Fribourg SA</h3>
-              <p class="company-card__rating"><span class="stars" style="--rating: 4.3" aria-hidden="true"></span><span><strong>4,3/5</strong> · 6 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-              <p class="rank-card__text">Étude fondée en 2005, installée à la route du Comptoir, avec une antenne à Bulle. Sept avocats y pratiquent notamment le droit de la construction, le droit de la famille et le droit pénal.</p>
-              <dl class="company-card__info">
-                <div><dt>Fondée en :</dt><dd>2005</dd></div>
-                <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-              </dl>
+            <div class="company-card__body">
+              <h3 class="company-card__name"><span class="visually-hidden">4. </span>Avocats Associés Fribourg SA</h3>
+              <div class="company-card__meta">
+                <p class="company-card__rating"><span class="stars" style="--rating: 4.3" aria-hidden="true"></span><span><strong>4,3/5</strong> · 6 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                <dl class="company-card__info">
+                  <div><dt>Fondée en :</dt><dd>2005</dd></div>
+                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
+                </dl>
+              </div>
+              <p class="company-card__text">Étude fondée en 2005, installée à la route du Comptoir, avec une antenne à Bulle. Sept avocats y pratiquent notamment le droit de la construction, le droit de la famille et le droit pénal.</p>
               <div class="company-card__points">
-                <p class="rank-card__label">Points forts :</p>
-                <ul class="rank-card__points">
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit de la construction et de l'immobilier</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Famille et successions</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Antenne à Bulle</span></li>
-                </ul>
+                <p class="company-card__label">Points forts :</p>
+                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit de la construction et de l'immobilier</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Famille et successions</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Antenne à Bulle</span></li></ul>
               </div>
-            </div>
-            <div class="rank-card__aside">
-              <div class="rank-card__rating">
-                <p class="rank-card__rating-head"><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span><strong>Avis Google :</strong></p>
-                <p><span class="rank-card__score">4,3/5</span>, 6 avis Google</p>
-                <span class="stars" style="--rating: 4.3" aria-hidden="true"></span>
-              </div>
-              <a class="btn btn--primary" href="https://www.avocats-fr.ch/" rel="nofollow noopener">Visiter le site</a>
             </div>
           </li>
-          <!-- organic: rel="nofollow" -->
-          <li class="rank-card company-card" data-reveal>
+          <!-- not a partner: no link -->
+          <li class="company-card" data-reveal>
             <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">5</span></div>
-            <div class="rank-card__main">
-              <h3 class="rank-card__title company-card__name"><span class="visually-hidden">5. </span>Farine Fabbro Études d'avocats SA</h3>
-              <p class="company-card__rating"><span class="stars" style="--rating: 3.9" aria-hidden="true"></span><span><strong>3,9/5</strong> · 9 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-              <p class="rank-card__text">Étude fondée en 2006 par Me Alexandra Farine Fabbro, avocate spécialiste FSA en droit des successions, installée à la route d'Yverdon, à Estavayer-le-Lac. Elle pratique aussi le droit de la famille, le droit pénal et les droits réels.</p>
-              <dl class="company-card__info">
-                <div><dt>Fondée en :</dt><dd>2006</dd></div>
-                <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-              </dl>
+            <div class="company-card__body">
+              <h3 class="company-card__name"><span class="visually-hidden">5. </span>Farine Fabbro Études d'avocats SA</h3>
+              <div class="company-card__meta">
+                <p class="company-card__rating"><span class="stars" style="--rating: 3.9" aria-hidden="true"></span><span><strong>3,9/5</strong> · 9 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                <dl class="company-card__info">
+                  <div><dt>Fondée en :</dt><dd>2006</dd></div>
+                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
+                </dl>
+              </div>
+              <p class="company-card__text">Étude fondée en 2006 par Me Alexandra Farine Fabbro, avocate spécialiste FSA en droit des successions, installée à la route d'Yverdon, à Estavayer-le-Lac. Elle pratique aussi le droit de la famille, le droit pénal et les droits réels.</p>
               <div class="company-card__points">
-                <p class="rank-card__label">Points forts :</p>
-                <ul class="rank-card__points">
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Avocate spécialiste FSA en droit des successions</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit de la famille</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit pénal et droits réels</span></li>
-                </ul>
+                <p class="company-card__label">Points forts :</p>
+                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Avocate spécialiste FSA en droit des successions</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit de la famille</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit pénal et droits réels</span></li></ul>
               </div>
-            </div>
-            <div class="rank-card__aside">
-              <div class="rank-card__rating">
-                <p class="rank-card__rating-head"><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span><strong>Avis Google :</strong></p>
-                <p><span class="rank-card__score">3,9/5</span>, 9 avis Google</p>
-                <span class="stars" style="--rating: 3.9" aria-hidden="true"></span>
-              </div>
-              <a class="btn btn--primary" href="https://www.alexandra-farine-fabbro.ch/" rel="nofollow noopener">Visiter le site</a>
             </div>
           </li>
         </ol>
@@ -418,11 +381,11 @@
       </div>
     </section>
 
-    <!-- BLOC 5 — comparison table (real <table>; the whole table slides sideways on
-         small screens, no visible scrollbar; an empty cell = no verified information) -->
-    <section class="section section--white" aria-labelledby="table-title">
+    <!-- BLOC 5 — comparison table, directly under its title (real <table>; the whole table slides
+         sideways on small screens, no visible scrollbar; an empty cell = no verified information) -->
+    <section class="section section--white section--table" aria-labelledby="table-title">
       <div class="container">
-        <header class="section-head" data-reveal>
+        <header class="section-head section-head--one-line" data-reveal>
           <div class="section-head__main">
             <h2 class="section-head__title" id="table-title">Comparatif des meilleurs avocats à Fribourg</h2>
           </div>

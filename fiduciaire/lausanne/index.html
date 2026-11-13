@@ -128,6 +128,18 @@
     <symbol id="i-t-tree" viewBox="0 0 24 24"><path d="M12 21v-6.5M12 17l-3-2.5M12 15.5l2.5-2"/><path d="M8 14.5a4.5 4.5 0 0 1-.8-8.9A5 5 0 0 1 16.8 5.6 4.5 4.5 0 0 1 16 14.5Z"/></symbol>
     <symbol id="i-t-scissors" viewBox="0 0 24 24"><circle cx="6.5" cy="7" r="2.5"/><circle cx="6.5" cy="17" r="2.5"/><path d="M8.6 8.4 20 17M8.6 15.6 20 7"/></symbol>
     <symbol id="i-t-sprinkler" viewBox="0 0 24 24"><path d="M12 9.5s3.5 3.7 3.5 6.3a3.5 3.5 0 0 1-7 0c0-2.6 3.5-6.3 3.5-6.3Z"/><path d="M5 9a8.5 8.5 0 0 1 3.2-3.6M19 9a8.5 8.5 0 0 0-3.2-3.6M10 3.6a8.5 8.5 0 0 1 4 0"/></symbol>
+    <symbol id="i-a-01" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 1 0 18ZM3 3a9 9 0 0 1 0 18M3 3v18"/></symbol>
+    <symbol id="i-a-02" viewBox="0 0 24 24"><path d="M3 12 12 3l9 9ZM12 12l-9 9h18Z"/></symbol>
+    <symbol id="i-a-03" viewBox="0 0 24 24"><path d="M3 3h18v18H3ZM12 3l9 9-9 9-9-9Z"/></symbol>
+    <symbol id="i-a-04" viewBox="0 0 24 24"><path d="M3 3 12 12 3 21ZM21 3l-9 9 9 9Z"/></symbol>
+    <symbol id="i-a-05" viewBox="0 0 24 24"><path d="M3 21A18 18 0 0 1 21 3 18 18 0 0 1 3 21Z"/></symbol>
+    <symbol id="i-a-06" viewBox="0 0 24 24"><path d="M3 3h12v12H3Z"/><circle cx="15" cy="15" r="6"/></symbol>
+    <symbol id="i-a-07" viewBox="0 0 24 24"><circle cx="7.5" cy="7.5" r="4.5"/><circle cx="16.5" cy="7.5" r="4.5"/><circle cx="7.5" cy="16.5" r="4.5"/><circle cx="16.5" cy="16.5" r="4.5"/></symbol>
+    <symbol id="i-a-08" viewBox="0 0 24 24"><path d="M3 21v-6h6V9h6V3h6v18Z"/></symbol>
+    <symbol id="i-a-09" viewBox="0 0 24 24"><path d="M3 15a9 9 0 0 1 18 0ZM7.5 15a4.5 4.5 0 0 1 9 0M3 19h18"/></symbol>
+    <symbol id="i-a-10" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0ZM3 12l9 9 9-9"/></symbol>
+    <symbol id="i-a-11" viewBox="0 0 24 24"><path d="M5 21V11a7 7 0 0 1 14 0v10ZM9.5 21v-8.5a2.5 2.5 0 0 1 5 0V21"/></symbol>
+    <symbol id="i-a-12" viewBox="0 0 24 24"><path d="M3 3h18v18H3ZM3 3l18 18M12 3l9 9M3 12l9 9"/></symbol>
   </svg>
 
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -219,158 +231,112 @@
       </div>
     </section>
 
-    <!-- BLOC 3 — Top 5 (company data is dynamic; partners come from « Client Flash #1–#5 ») -->
-    <section class="section section--white" aria-labelledby="top-title">
+    <!-- BLOC 3 — Top 5: one compact card per company.
+         Partners (Google Sheet « Client Flash #1–#5 ») get a DoFollow « Visiter le site » link; the others no link. -->
+    <section class="section section--white section--top5" aria-labelledby="top-title">
       <div class="container">
-        <header class="section-head" data-reveal>
+        <header class="section-head section-head--one-line" data-reveal>
           <div class="section-head__main">
             <h2 class="section-head__title" id="top-title">Top 5 des meilleures fiduciaires à Lausanne</h2>
           </div>
         </header>
-        <ol class="ranking">
-          <!-- partner: rel="sponsored" -->
-          <li class="rank-card company-card" data-reveal>
+        <ol class="ranking ranking--compact">
+          <!-- partner: DoFollow link -->
+          <li class="company-card company-card--partner" data-reveal>
             <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">1</span></div>
-            <div class="rank-card__main">
-              <h3 class="rank-card__title company-card__name"><span class="visually-hidden">1. </span>Cofidex SA</h3>
-              <p class="company-card__rating"><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span><strong>4,9/5</strong> · 83 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-              <p class="rank-card__text">Fiduciaire fondée en 2007, basée à Saint-Sulpice avec une antenne à Chernex, active dans le canton de Vaud depuis plus de 18 ans. Elle est membre de FIDUCIAIRE|SUISSE et d'EXPERTsuisse.</p>
-              <dl class="company-card__info">
-                <div><dt>Fondée en :</dt><dd>2007</dd></div>
-                <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-              </dl>
+            <div class="company-card__body">
+              <h3 class="company-card__name"><span class="visually-hidden">1. </span>Cofidex SA</h3>
+              <div class="company-card__meta">
+                <p class="company-card__rating"><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span><strong>4,9/5</strong> · 83 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                <dl class="company-card__info">
+                  <div><dt>Fondée en :</dt><dd>2007</dd></div>
+                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
+                </dl>
+              </div>
+              <p class="company-card__text">Fiduciaire fondée en 2007, basée à Saint-Sulpice avec une antenne à Chernex, active dans le canton de Vaud depuis plus de 18 ans. Elle est membre de FIDUCIAIRE|SUISSE et d'EXPERTsuisse.</p>
               <div class="company-card__points">
-                <p class="rank-card__label">Points forts :</p>
-                <ul class="rank-card__points">
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Comptabilité, fiscalité et révision</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Gestion des salaires et des ressources humaines</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Acquisition d'entreprise et formation Abacus</span></li>
-                </ul>
+                <p class="company-card__label">Points forts :</p>
+                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Comptabilité, fiscalité et révision</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Gestion des salaires et des ressources humaines</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Acquisition d'entreprise et formation Abacus</span></li></ul>
               </div>
             </div>
-            <div class="rank-card__aside">
-              <div class="rank-card__rating">
-                <p class="rank-card__rating-head"><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span><strong>Avis Google :</strong></p>
-                <p><span class="rank-card__score">4,9/5</span>, 83 avis Google</p>
-                <span class="stars" style="--rating: 4.9" aria-hidden="true"></span>
-              </div>
-              <a class="btn btn--primary" href="https://cofidex.ch/" rel="sponsored noopener">Visiter le site</a>
+            <div class="company-card__action">
+              <a class="btn btn--primary" href="https://cofidex.ch/">Visiter le site</a>
             </div>
           </li>
-          <!-- organic: rel="nofollow" -->
-          <li class="rank-card company-card" data-reveal>
+          <!-- not a partner: no link -->
+          <li class="company-card" data-reveal>
             <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">2</span></div>
-            <div class="rank-card__main">
-              <h3 class="rank-card__title company-card__name"><span class="visually-hidden">2. </span>Fiduciaire Lausanne Vivatax</h3>
-              <p class="company-card__rating"><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span><strong>4,9/5</strong> · 189 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-              <p class="rank-card__text">Fiduciaire du réseau Vivatax, également présente à Neuchâtel, installée avenue du Théâtre à Lausanne. Elle est spécialisée dans les déclarations d'impôts des particuliers et des indépendants.</p>
-              <dl class="company-card__info">
-                <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-              </dl>
+            <div class="company-card__body">
+              <h3 class="company-card__name"><span class="visually-hidden">2. </span>Fiduciaire Lausanne Vivatax</h3>
+              <div class="company-card__meta">
+                <p class="company-card__rating"><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span><strong>4,9/5</strong> · 189 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                <dl class="company-card__info">
+                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
+                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
+                </dl>
+              </div>
+              <p class="company-card__text">Fiduciaire du réseau Vivatax, également présente à Neuchâtel, installée avenue du Théâtre à Lausanne. Elle est spécialisée dans les déclarations d'impôts des particuliers et des indépendants.</p>
               <div class="company-card__points">
-                <p class="rank-card__label">Points forts :</p>
-                <ul class="rank-card__points">
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Déclarations fiscales pour particuliers et indépendants</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Application mobile de suivi des démarches</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Présente aussi à Neuchâtel</span></li>
-                </ul>
+                <p class="company-card__label">Points forts :</p>
+                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Déclarations fiscales pour particuliers et indépendants</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Application mobile de suivi des démarches</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Présente aussi à Neuchâtel</span></li></ul>
               </div>
-            </div>
-            <div class="rank-card__aside">
-              <div class="rank-card__rating">
-                <p class="rank-card__rating-head"><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span><strong>Avis Google :</strong></p>
-                <p><span class="rank-card__score">4,9/5</span>, 189 avis Google</p>
-                <span class="stars" style="--rating: 4.9" aria-hidden="true"></span>
-              </div>
-              <a class="btn btn--primary" href="https://www.vivatax.ch/" rel="nofollow noopener">Visiter le site</a>
             </div>
           </li>
-          <!-- organic: rel="nofollow" -->
-          <li class="rank-card company-card" data-reveal>
+          <!-- not a partner: no link -->
+          <li class="company-card" data-reveal>
             <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">3</span></div>
-            <div class="rank-card__main">
-              <h3 class="rank-card__title company-card__name"><span class="visually-hidden">3. </span>Veltica Finance Sàrl</h3>
-              <p class="company-card__rating"><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span><strong>4,9/5</strong> · 115 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-              <p class="rank-card__text">Fiduciaire fondée en 2019, installée rue Caroline à Lausanne, avec une antenne à Genève. Elle accompagne particuliers et entreprises dans leurs démarches comptables, fiscales et administratives.</p>
-              <dl class="company-card__info">
-                <div><dt>Fondée en :</dt><dd>2019</dd></div>
-                <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-              </dl>
+            <div class="company-card__body">
+              <h3 class="company-card__name"><span class="visually-hidden">3. </span>Veltica Finance Sàrl</h3>
+              <div class="company-card__meta">
+                <p class="company-card__rating"><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span><strong>4,9/5</strong> · 115 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                <dl class="company-card__info">
+                  <div><dt>Fondée en :</dt><dd>2019</dd></div>
+                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
+                </dl>
+              </div>
+              <p class="company-card__text">Fiduciaire fondée en 2019, installée rue Caroline à Lausanne, avec une antenne à Genève. Elle accompagne particuliers et entreprises dans leurs démarches comptables, fiscales et administratives.</p>
               <div class="company-card__points">
-                <p class="rank-card__label">Points forts :</p>
-                <ul class="rank-card__points">
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Comptabilité, TVA et déclarations fiscales</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Salaires et ressources humaines</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Création de société et domiciliation</span></li>
-                </ul>
+                <p class="company-card__label">Points forts :</p>
+                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Comptabilité, TVA et déclarations fiscales</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Salaires et ressources humaines</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Création de société et domiciliation</span></li></ul>
               </div>
-            </div>
-            <div class="rank-card__aside">
-              <div class="rank-card__rating">
-                <p class="rank-card__rating-head"><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span><strong>Avis Google :</strong></p>
-                <p><span class="rank-card__score">4,9/5</span>, 115 avis Google</p>
-                <span class="stars" style="--rating: 4.9" aria-hidden="true"></span>
-              </div>
-              <a class="btn btn--primary" href="https://www.veltica.ch/" rel="nofollow noopener">Visiter le site</a>
             </div>
           </li>
-          <!-- organic: rel="nofollow" -->
-          <li class="rank-card company-card" data-reveal>
+          <!-- not a partner: no link -->
+          <li class="company-card" data-reveal>
             <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">4</span></div>
-            <div class="rank-card__main">
-              <h3 class="rank-card__title company-card__name"><span class="visually-hidden">4. </span>FBK Conseils</h3>
-              <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 105 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-              <p class="rank-card__text">Cabinet fondé en 2019, installé avenue du Théâtre à Lausanne. Il accompagne les particuliers et les frontaliers sur les déclarations fiscales, la prévoyance et l'immobilier.</p>
-              <dl class="company-card__info">
-                <div><dt>Fondée en :</dt><dd>2019</dd></div>
-                <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-              </dl>
+            <div class="company-card__body">
+              <h3 class="company-card__name"><span class="visually-hidden">4. </span>FBK Conseils</h3>
+              <div class="company-card__meta">
+                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 105 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                <dl class="company-card__info">
+                  <div><dt>Fondée en :</dt><dd>2019</dd></div>
+                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
+                </dl>
+              </div>
+              <p class="company-card__text">Cabinet fondé en 2019, installé avenue du Théâtre à Lausanne. Il accompagne les particuliers et les frontaliers sur les déclarations fiscales, la prévoyance et l'immobilier.</p>
               <div class="company-card__points">
-                <p class="rank-card__label">Points forts :</p>
-                <ul class="rank-card__points">
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Déclarations fiscales (VD, GE, VS)</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Prévoyance et rachats du 2e pilier</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Dossiers hypothécaires et investissement</span></li>
-                </ul>
+                <p class="company-card__label">Points forts :</p>
+                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Déclarations fiscales (VD, GE, VS)</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Prévoyance et rachats du 2e pilier</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Dossiers hypothécaires et investissement</span></li></ul>
               </div>
-            </div>
-            <div class="rank-card__aside">
-              <div class="rank-card__rating">
-                <p class="rank-card__rating-head"><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span><strong>Avis Google :</strong></p>
-                <p><span class="rank-card__score">5,0/5</span>, 105 avis Google</p>
-                <span class="stars" style="--rating: 5.0" aria-hidden="true"></span>
-              </div>
-              <a class="btn btn--primary" href="https://fbk-conseils.ch/" rel="nofollow noopener">Visiter le site</a>
             </div>
           </li>
-          <!-- organic: rel="nofollow" -->
-          <li class="rank-card company-card" data-reveal>
+          <!-- not a partner: no link -->
+          <li class="company-card" data-reveal>
             <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">5</span></div>
-            <div class="rank-card__main">
-              <h3 class="rank-card__title company-card__name"><span class="visually-hidden">5. </span>Fiduciaire 24</h3>
-              <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 66 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-              <p class="rank-card__text">Fiduciaire basée à Lausanne, dans le canton de Vaud, qui s'adresse aux clients de Suisse romande pour leurs démarches fiscales et comptables courantes.</p>
-              <dl class="company-card__info">
-                <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-              </dl>
+            <div class="company-card__body">
+              <h3 class="company-card__name"><span class="visually-hidden">5. </span>Fiduciaire 24</h3>
+              <div class="company-card__meta">
+                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 66 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                <dl class="company-card__info">
+                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
+                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
+                </dl>
+              </div>
+              <p class="company-card__text">Fiduciaire basée à Lausanne, dans le canton de Vaud, qui s'adresse aux clients de Suisse romande pour leurs démarches fiscales et comptables courantes.</p>
               <div class="company-card__points">
-                <p class="rank-card__label">Points forts :</p>
-                <ul class="rank-card__points">
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Déclarations fiscales pour particuliers et indépendants</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Tenue de comptabilité et bouclement</span></li>
-                  <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Création de société et gestion administrative</span></li>
-                </ul>
+                <p class="company-card__label">Points forts :</p>
+                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Déclarations fiscales pour particuliers et indépendants</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Tenue de comptabilité et bouclement</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Création de société et gestion administrative</span></li></ul>
               </div>
-            </div>
-            <div class="rank-card__aside">
-              <div class="rank-card__rating">
-                <p class="rank-card__rating-head"><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span><strong>Avis Google :</strong></p>
-                <p><span class="rank-card__score">5,0/5</span>, 66 avis Google</p>
-                <span class="stars" style="--rating: 5.0" aria-hidden="true"></span>
-              </div>
-              <a class="btn btn--primary" href="https://www.fiduciaire24.ch/" rel="nofollow noopener">Visiter le site</a>
             </div>
           </li>
         </ol>
@@ -418,11 +384,11 @@
       </div>
     </section>
 
-    <!-- BLOC 5 — comparison table (real <table>; the whole table slides sideways on
-         small screens, no visible scrollbar; an empty cell = no verified information) -->
-    <section class="section section--white" aria-labelledby="table-title">
+    <!-- BLOC 5 — comparison table, directly under its title (real <table>; the whole table slides
+         sideways on small screens, no visible scrollbar; an empty cell = no verified information) -->
+    <section class="section section--white section--table" aria-labelledby="table-title">
       <div class="container">
-        <header class="section-head" data-reveal>
+        <header class="section-head section-head--one-line" data-reveal>
           <div class="section-head__main">
             <h2 class="section-head__title" id="table-title">Comparatif des meilleures fiduciaires à Lausanne</h2>
           </div>
