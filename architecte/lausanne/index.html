@@ -245,18 +245,18 @@
             <thead>
               <tr>
                   <th scope="col">Rang</th>
-                  <th scope="col">Nom de l'entreprise</th>
-                  <th scope="col"><span class="compare-table__head-g">Avis Google<img src="../../images/google-maps-pin.webp" alt="" width="10" height="14" loading="lazy" decoding="async"></span></th>
-                  <th scope="col" class="compare-table__wide">Spécialité</th>
-                  <th scope="col">Clientèle</th>
-                  <th scope="col">Année de fondation</th>
-                  <th scope="col">REG / registre</th>
+                  <th scope="col"><span class="compare-table__head"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-building"></use></svg>Entreprise</span></th>
+                  <th scope="col"><span class="compare-table__head compare-table__head-g">Avis Google<img src="../../images/google-maps-pin.webp" alt="" width="10" height="14" loading="lazy" decoding="async"></span></th>
+                  <th scope="col" class="compare-table__wide"><span class="compare-table__head"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-tag"></use></svg>Spécialité</span></th>
+                  <th scope="col"><span class="compare-table__head"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-users"></use></svg>Clientèle</span></th>
+                  <th scope="col"><span class="compare-table__head"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg>Fondée en</span></th>
+                  <th scope="col"><span class="compare-table__head"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg>Registre REG</span></th>
               </tr>
             </thead>
             <tbody>
                 <tr class="is-first">
                   <td class="compare-table__rank"><span class="rank-badge">1</span></td>
-                  <th scope="row" class="compare-table__name">Atelier Commun SA</th>
+                  <th scope="row" class="compare-table__name"><a class="compare-table__link" href="https://ateliercommun.ch/">Atelier Commun <span class="compare-table__link-end">SA<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg></span></a></th>
                   <td class="compare-table__rating"><span class="stars" style="--rating: 4.8" aria-hidden="true"></span><span class="compare-table__rating-text">4,8/5 (23 avis)</span></td>
                   <td class="compare-table__wide">Rénovation et transformation</td>
                   <td>Particuliers</td>
@@ -265,7 +265,7 @@
                 </tr>
                 <tr>
                   <td class="compare-table__rank"><span class="rank-badge">2</span></td>
-                  <th scope="row" class="compare-table__name">Charles Jenny Architecte Sàrl</th>
+                  <th scope="row" class="compare-table__name"><a class="compare-table__link" href="https://charlesjenny.ch/">Charles Jenny Architecte <span class="compare-table__link-end">Sàrl<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg></span></a></th>
                   <td class="compare-table__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="compare-table__rating-text">5,0/5 (6 avis)</span></td>
                   <td class="compare-table__wide">Conception et visuels de projet</td>
                   <td>Particuliers</td>
@@ -363,7 +363,7 @@
             <div class="top-card__main">
               <div class="company-logo company-logo--mono" aria-hidden="true">CO</div>
               <div class="top-card__body">
-                <h3 class="top-card__name"><span class="visually-hidden">1. </span>Atelier Commun SA</h3>
+                <h3 class="top-card__name"><span class="visually-hidden">1. </span><a class="top-card__link" href="https://ateliercommun.ch/">Atelier Commun SA</a></h3>
                 <div class="top-card__meta">
                   <p class="top-card__rating"><strong>4,8</strong><span class="stars" style="--rating: 4.8" aria-hidden="true"></span><span class="top-card__reviews">23 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
                   <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
@@ -384,7 +384,7 @@
             <div class="top-card__main">
               <div class="company-logo company-logo--mono" aria-hidden="true">CJ</div>
               <div class="top-card__body">
-                <h3 class="top-card__name"><span class="visually-hidden">2. </span>Charles Jenny Architecte Sàrl</h3>
+                <h3 class="top-card__name"><span class="visually-hidden">2. </span><a class="top-card__link" href="https://charlesjenny.ch/">Charles Jenny Architecte Sàrl</a></h3>
                 <div class="top-card__meta">
                   <p class="top-card__rating"><strong>5,0</strong><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="top-card__reviews">6 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
                   <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
@@ -399,8 +399,8 @@
               <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Suivi personnalisé du projet</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Visuels et esquisses soignés</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Bureau au centre de Lausanne</li></ul>
             </div>
           </li>
-          <!-- not a partner: nofollow link -->
-          <li class="top-card" data-reveal>
+          <!-- not a partner: no link -->
+          <li class="top-card top-card--no-cta" data-reveal>
             <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°3</span>
             <div class="top-card__main">
               <div class="company-logo company-logo--mono" aria-hidden="true">CA</div>
@@ -413,15 +413,14 @@
                 </div>
                 <p class="top-card__text">Bureau du groupe CCHE, installé à la <strong>rue du Grand-Pré</strong>, à Lausanne, avec d'autres antennes en Suisse romande, notamment à Nyon et à Genève. Il intervient sur des projets de toutes tailles, du logement aux bâtiments publics.</p>
               </div>
-              <a class="btn btn--primary top-card__cta" href="https://cche.com/fr/filiales/lausanne" rel="nofollow noopener">Visiter le site</a>
             </div>
             <div class="top-card__points">
               <p class="top-card__label">Points forts :</p>
               <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Antennes à Nyon et à Genève</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Projets de toutes tailles</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Logement et bâtiments publics</li></ul>
             </div>
           </li>
-          <!-- not a partner: nofollow link -->
-          <li class="top-card" data-reveal>
+          <!-- not a partner: no link -->
+          <li class="top-card top-card--no-cta" data-reveal>
             <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°4</span>
             <div class="top-card__main">
               <div class="company-logo company-logo--mono" aria-hidden="true">WL</div>
@@ -434,15 +433,14 @@
                 </div>
                 <p class="top-card__text">Bureau installé à la <strong>place de l'Europe</strong>, au centre de Lausanne. Il intervient en architecture et en direction des travaux pour des projets privés et professionnels.</p>
               </div>
-              <a class="btn btn--primary top-card__cta" href="https://www.flon.ch/fr/locataires/design-art-architecture/4/architecture/21/winthrop-locher-partners/98" rel="nofollow noopener">Visiter le site</a>
             </div>
             <div class="top-card__points">
               <p class="top-card__label">Points forts :</p>
               <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Bureau au centre de Lausanne</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Architecture et direction des travaux</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Projets privés et professionnels</li></ul>
             </div>
           </li>
-          <!-- not a partner: nofollow link -->
-          <li class="top-card" data-reveal>
+          <!-- not a partner: no link -->
+          <li class="top-card top-card--no-cta" data-reveal>
             <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°5</span>
             <div class="top-card__main">
               <div class="company-logo company-logo--mono" aria-hidden="true">AA</div>
@@ -455,7 +453,6 @@
                 </div>
                 <p class="top-card__text">Bureau installé à l'<strong>avenue Édouard-Dapples</strong>, actif à Lausanne et à Morges. Il accompagne des projets de construction et de rénovation pour des particuliers.</p>
               </div>
-              <a class="btn btn--primary top-card__cta" href="https://www.local.ch/fr/d/lausanne/1006/architectural-firm/ang-architecture-nilton-guerreiro-vEUjEnNPsK1fAgafeRceTQ" rel="nofollow noopener">Visiter le site</a>
             </div>
             <div class="top-card__points">
               <p class="top-card__label">Points forts :</p>

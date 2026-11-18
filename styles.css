@@ -1806,6 +1806,7 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
 .top-card__missing { font-style: italic; color: var(--slate); }
 .top-card__text { max-width: 78ch; margin-top: 0.75rem; color: var(--slate); }
 .top-card__text strong { font-weight: 600; color: var(--navy); }
+.top-card--no-cta .top-card__main { grid-template-columns: auto minmax(0, 1fr); }
 .top-card__cta { white-space: nowrap; }   /* the site's standard yellow button (.btn .btn--primary), nothing added */
 
 /* Points forts: cream strip under the card body */
@@ -1869,14 +1870,21 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
 .compare-table { width: 100%; min-width: 1180px; border-collapse: separate; border-spacing: 0 0.375rem; margin-block: -0.375rem; font-size: 0.9375rem; }
 .compare-table th,
 .compare-table td { padding: 1rem 1.25rem; text-align: start; vertical-align: middle; }   /* short cells sit in the middle of the row */
-.compare-table thead th {                  /* header: smaller, muted gray-blue, so the data stands out */
-  padding-block: 0.875rem 0.5rem;
-  font-size: 0.8125rem;
+.compare-table thead th {                  /* header: navy bar, white titles on one line, each with a yellow icon */
+  padding-block: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.3;
-  color: var(--slate);
-  vertical-align: bottom;
+  white-space: nowrap;
+  color: var(--white);
+  background: var(--navy);
+  box-shadow: 1px 0 0 var(--navy);          /* no hairline seams between the navy cells */
+  vertical-align: middle;
 }
+.compare-table thead tr > :first-child { border-radius: var(--radius) 0 0 var(--radius); }
+.compare-table thead tr > :last-child { border-radius: 0 var(--radius) var(--radius) 0; }
+.compare-table__head { display: inline-flex; align-items: center; gap: 0.5rem; }
+.compare-table__head .icon { width: 18px; height: 18px; flex-shrink: 0; color: var(--yellow); }
 .compare-table tbody td,
 .compare-table tbody th { background: var(--white); }
 .compare-table tbody tr > :first-child { border-radius: var(--radius) 0 0 var(--radius); }
@@ -1884,7 +1892,22 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
 .compare-table td { min-width: 9.5rem; color: var(--slate); }   /* text columns wide enough to avoid tall rows when the table slides */
 .compare-table td.compare-table__rank, .compare-table td.compare-table__rating, .compare-table td.compare-table__center { min-width: 0; }
 .compare-table .compare-table__wide { min-width: 21.5rem; }      /* Spécialité / Prestations: 2 lines at most */
-.compare-table tbody th { min-width: 10.5rem; font-weight: 600; color: var(--navy); }
+.compare-table tbody th { min-width: 10.5rem; font-size: 1rem; font-weight: 600; color: var(--navy); }
+
+/* Client name: the only link in the table (DoFollow) */
+.compare-table__link,
+.top-card__link {
+  color: var(--navy);
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: text-decoration-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.compare-table__link:hover,
+.top-card__link:hover { color: var(--slate); text-decoration-color: var(--navy); }
+.compare-table__link-end { white-space: nowrap; }   /* the arrow stays next to the last word */
+.compare-table__link .icon { display: inline-block; width: 15px; height: 15px; margin-left: 0.3125rem; vertical-align: -0.125em; stroke-width: 2; }
 
 /* Rank: a round navy badge; the #1 row gets the amber badge */
 .compare-table .compare-table__rank { width: 4.5rem; min-width: 4.5rem; padding-inline: 1rem 0.5rem; }
@@ -1909,8 +1932,7 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
 
 /* Google rating: 5 amber stars (filled to the score), the original text under them */
 .compare-table .compare-table__rating { white-space: nowrap; }
-.compare-table__head-g { display: inline-flex; align-items: center; gap: 0.375rem; }
-.compare-table__head-g img { width: auto; height: 14px; }
+.compare-table__head-g img { width: auto; height: 16px; }
 .stars {
   --star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.5l2.94 6.06 6.56.92-4.78 4.6 1.17 6.52L12 17.5l-5.89 3.1 1.17-6.52-4.78-4.6 6.56-.92z'/%3E%3C/svg%3E");
   position: relative;
@@ -1931,7 +1953,7 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
 }
 .compare-table__rating-text { display: block; }
 
-/* « Inscrit »: soft green pill with a check */
+/* « Inscrit »: navy text on a cream pill with a check (site palette only) */
 .status-pill {
   display: inline-flex;
   align-items: center;
@@ -1941,14 +1963,14 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
   font-weight: 600;
   line-height: 1.2;
   white-space: nowrap;
-  color: #1F5F36;                          /* dark green on light green: 7.6:1 */
-  background: #E2F2E6;
+  color: var(--navy);
+  background: var(--cream);
   border-radius: var(--radius-pill);
 }
 .status-pill .icon { width: 15px; height: 15px; stroke-width: 2.25; }
 
 /* Missing information reads as missing, not as data */
-.compare-table__missing { color: #66758A; font-style: italic; }   /* 4.7:1 on white */
+.compare-table__missing { color: var(--slate); font-style: italic; }
 
 /* ---- Closing block extra line (last update) ---- */
 .cta--balanced .section-head__title {
