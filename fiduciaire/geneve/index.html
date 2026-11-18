@@ -231,166 +231,16 @@
       </div>
     </section>
 
-    <!-- BLOC 3 — Top 5: one compact card per company.
-         Partners (Google Sheet « Client Flash #1–#5 ») get a DoFollow « Visiter le site » link; the others no link. -->
-    <section class="section section--white section--top5" aria-labelledby="top-title">
+    <!-- BLOC 3 — Top 5: comparison table right after the hero, directly under its title (real <table>; the whole table slides
+         sideways on small screens, no visible scrollbar; an empty cell = no verified information) -->
+    <section class="section section--white section--top5 section--table" aria-labelledby="top-title">
       <div class="container">
         <header class="section-head section-head--one-line" data-reveal>
           <div class="section-head__main">
             <h2 class="section-head__title" id="top-title">Top 5 des meilleures fiduciaires à Genève</h2>
           </div>
         </header>
-        <ol class="ranking ranking--compact">
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">1</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">1. </span>Fiduciaire RISTER Sàrl</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 54 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Fiduciaire installée rue Adrien-Lachenal à Genève, revendiquant 25 ans d'expérience dans la place genevoise. Elle accompagne PME, entrepreneurs et frontaliers.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Création de SA et de Sàrl</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Comptabilité, TVA et salaires</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Domiciliation et mandat de gérant résident</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">2</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">2. </span>Fiduciaire Genevoise</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span><strong>4,9/5</strong> · 48 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd>2023</dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Fiduciaire fondée en 2023 à Genève, qui propose la comptabilité, l'optimisation fiscale et le conseil en finance d'entreprise.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Comptabilité et optimisation fiscale</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Révision et finance d'entreprise</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Conseil en gestion d'entreprise</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">3</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">3. </span>My Swiss Company SA</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.8" aria-hidden="true"></span><span><strong>4,8/5</strong> · 34 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd>1989</dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Fiduciaire active depuis 1989 à Genève, spécialisée dans la création et l'administration de sociétés pour une clientèle internationale.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Création de société et domiciliation</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Comptabilité, TVA et salaires</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Mandat d'administrateur ou de gérant résident</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">4</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">4. </span>Fiduciaire Fidulex Sàrl</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 31 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd>2023</dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Fiduciaire fondée en 2023, installée rue François-Bonivard à Genève. Elle propose la comptabilité, les salaires et l'évaluation d'entreprise.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Comptabilité financière</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Traitement des salaires</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Évaluation et valorisation d'entreprise</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">5</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">5. </span>Phi Fiduciaire</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span><strong>4,9/5</strong> · 30 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Fiduciaire installée rue de Malatrex à Genève, accompagnant notamment une clientèle non francophone dans ses démarches fiscales.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Déclarations fiscales des particuliers</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Accompagnement en anglais</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Conseil fiscal ponctuel</span></li></ul>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- BLOC 4 — selection criteria (homepage criteria component) -->
-    <section class="section section--cream" aria-labelledby="selection-title">
-      <div class="container">
-        <header class="section-head" data-reveal>
-          <div class="section-head__main">
-            <h2 class="section-head__title" id="selection-title">Comment nous avons sélectionné les meilleures fiduciaires à Genève</h2>
-          </div>
-          <div class="section-head__aside">
-            <a class="btn btn--primary section-head__cta" href="/methodologie/">Voir notre méthodologie complète</a>
-          </div>
-        </header>
-        <ul class="criteria criteria--compact" data-reveal>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reviews"></use></svg></span>
-            <h3 class="criterion__title">Avis clients</h3>
-            <p class="criterion__text">La note et le nombre d'avis Google de la fiduciaire, relevés à la date de mise à jour. Une fiduciaire doit compter au moins 5 avis pour être classée.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-expertise"></use></svg></span>
-            <h3 class="criterion__title">Expertise</h3>
-            <p class="criterion__text">L'agrément de l'ASR et l'adhésion à FIDUCIAIRE|SUISSE ou à EXPERTsuisse.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reliability"></use></svg></span>
-            <h3 class="criterion__title">Fiabilité</h3>
-            <p class="criterion__text">L'inscription au registre du commerce et l'ancienneté de l'entreprise.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-local"></use></svg></span>
-            <h3 class="criterion__title">Présence locale</h3>
-            <p class="criterion__text">Un bureau à Genève ou ailleurs dans le canton de Genève.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-pricing"></use></svg></span>
-            <h3 class="criterion__title">Transparence tarifaire</h3>
-            <p class="criterion__text">Conditions ou offre gratuite publiées (50 points) ou grille de prix publiée (100 points).</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- BLOC 5 — comparison table, directly under its title (real <table>; the whole table slides
-         sideways on small screens, no visible scrollbar; an empty cell = no verified information) -->
-    <section class="section section--white section--table" aria-labelledby="table-title">
-      <div class="container">
-        <header class="section-head section-head--one-line" data-reveal>
-          <div class="section-head__main">
-            <h2 class="section-head__title" id="table-title">Comparatif des meilleures fiduciaires à Genève</h2>
-          </div>
-        </header>
-        <div class="table-scroll" role="region" aria-labelledby="table-title" tabindex="0" data-reveal>
+        <div class="table-scroll" role="region" aria-labelledby="top-title" tabindex="0" data-reveal>
           <table class="compare-table">
             <thead>
               <tr>
@@ -452,6 +302,167 @@
             </tbody>
           </table>
         </div>
+      </div>
+    </section>
+
+    <!-- BLOC 4 — selection criteria (homepage criteria component) -->
+    <section class="section section--cream" aria-labelledby="selection-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div class="section-head__main">
+            <h2 class="section-head__title" id="selection-title">Comment nous avons sélectionné les meilleures fiduciaires à Genève</h2>
+          </div>
+          <div class="section-head__aside">
+            <a class="btn btn--primary section-head__cta" href="/methodologie/">Voir notre méthodologie complète</a>
+          </div>
+        </header>
+        <ul class="criteria criteria--compact" data-reveal>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reviews"></use></svg></span>
+            <h3 class="criterion__title">Avis clients</h3>
+            <p class="criterion__text">La note et le nombre d'avis Google de la fiduciaire, relevés à la date de mise à jour. Une fiduciaire doit compter au moins 5 avis pour être classée.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-expertise"></use></svg></span>
+            <h3 class="criterion__title">Expertise</h3>
+            <p class="criterion__text">L'agrément de l'ASR et l'adhésion à FIDUCIAIRE|SUISSE ou à EXPERTsuisse.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reliability"></use></svg></span>
+            <h3 class="criterion__title">Fiabilité</h3>
+            <p class="criterion__text">L'inscription au registre du commerce et l'ancienneté de l'entreprise.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-local"></use></svg></span>
+            <h3 class="criterion__title">Présence locale</h3>
+            <p class="criterion__text">Un bureau à Genève ou ailleurs dans le canton de Genève.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-pricing"></use></svg></span>
+            <h3 class="criterion__title">Transparence tarifaire</h3>
+            <p class="criterion__text">Conditions ou offre gratuite publiées (50 points) ou grille de prix publiée (100 points).</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BLOC 5 — « Comparatif »: one white card per company (Margaux's mockup): « N°x » tab · logo (or initials) · name ·
+         rating + « Fondée en » + « Entreprise enregistrée » chips · text with key facts in bold · « Visiter le site »
+         on the right (partners only, DoFollow — Google Sheet « Client Flash #1–#5 ») · « Points forts » pills in a cream strip. -->
+    <section class="section section--white" aria-labelledby="comparatif-title">
+      <div class="container">
+        <header class="section-head section-head--one-line" data-reveal>
+          <div class="section-head__main">
+            <h2 class="section-head__title" id="comparatif-title">Comparatif des meilleures fiduciaires à Genève</h2>
+          </div>
+        </header>
+        <ol class="ranking ranking--feature">
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°1</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">FR</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">1. </span>Fiduciaire RISTER Sàrl</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>5,0</strong><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="top-card__reviews">54 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Fiduciaire installée <strong>rue Adrien-Lachenal</strong> à Genève, revendiquant 25 ans d'expérience dans la place genevoise. Elle accompagne PME, entrepreneurs et frontaliers.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.rister.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Création de SA et de Sàrl</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Comptabilité, TVA et salaires</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Domiciliation et mandat de gérant résident</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°2</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">FG</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">2. </span>Fiduciaire Genevoise</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,9</strong><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span class="top-card__reviews">48 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en <strong>2023</strong></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Fiduciaire <strong>fondée en 2023</strong> à Genève, qui propose la comptabilité, l'optimisation fiscale et le conseil en finance d'entreprise.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://fiduciaire-genevoise.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Comptabilité et optimisation fiscale</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Révision et finance d'entreprise</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Conseil en gestion d'entreprise</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°3</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">MS</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">3. </span>My Swiss Company SA</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,8</strong><span class="stars" style="--rating: 4.8" aria-hidden="true"></span><span class="top-card__reviews">34 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en <strong>1989</strong></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Fiduciaire active <strong>depuis 1989</strong> à Genève, spécialisée dans la création et l'administration de sociétés pour une clientèle internationale.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://my-swiss-company.com/fiduciaire-geneve/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Création de société et domiciliation</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Comptabilité, TVA et salaires</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Mandat d'administrateur ou de gérant résident</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°4</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">FF</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">4. </span>Fiduciaire Fidulex Sàrl</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>5,0</strong><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="top-card__reviews">31 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en <strong>2023</strong></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Fiduciaire <strong>fondée en 2023</strong>, installée rue François-Bonivard à Genève. Elle propose la comptabilité, les salaires et l'évaluation d'entreprise.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://fidulex.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Comptabilité financière</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Traitement des salaires</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Évaluation et valorisation d'entreprise</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°5</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">PF</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">5. </span>Phi Fiduciaire</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,9</strong><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span class="top-card__reviews">30 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Fiduciaire installée <strong>rue de Malatrex</strong> à Genève, accompagnant notamment une clientèle non francophone dans ses démarches fiscales.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://phi-fiduciaire.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Déclarations fiscales des particuliers</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Accompagnement en anglais</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Conseil fiscal ponctuel</li></ul>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 

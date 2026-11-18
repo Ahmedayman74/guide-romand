@@ -1728,6 +1728,131 @@ html:not(.js) .hero-stage { --hs-scale: 0.66; }
 }
 .rank-card__aside .btn { width: 100%; }
 
+/* ---- « Comparatif » company cards (Margaux's mockup) ----
+   White card · navy « ★ N°x » tab on the top edge · logo square · name ·
+   rating | « Fondée en » chip | « Entreprise enregistrée » chip · text (key facts in bold) ·
+   « Visiter le site » on the right (partners only) · « Points forts » pills in a cream strip at the bottom */
+.ranking--feature { gap: 2rem; padding-top: 0.875rem; }   /* room for the first tab */
+.top-card {
+  --pad-x: clamp(1.25rem, 0.75rem + 1.75vw, 2.25rem);
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 6px 24px rgba(17, 44, 71, 0.12);   /* same soft navy shadow as the header pill */
+}
+.top-card__rank {
+  position: absolute;
+  top: -0.875rem;
+  left: calc(var(--pad-x) - 0.25rem);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+  padding: 0.3125rem 0.75rem 0.3125rem 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+  background: var(--navy);
+  border-radius: var(--radius-pill);
+}
+.top-card__rank .icon { width: 13px; height: 13px; fill: var(--yellow); stroke: var(--yellow); }
+.top-card__main {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: clamp(1.25rem, 0.75rem + 1.25vw, 2rem);
+  padding: 1.75rem var(--pad-x) 1.5rem;
+}
+.top-card .company-logo {
+  align-self: start;
+  width: 88px;
+  height: 88px;
+  padding: 10px;
+  border-radius: 18px;
+  box-shadow: 0 0 0 1px var(--line);
+}
+.top-card .company-logo--dark { box-shadow: none; }
+.top-card .company-logo--mono {                                  /* no logo yet: the company's initials on navy */
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--white);
+  background: var(--navy);
+  box-shadow: none;
+}
+.top-card__name { font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; color: var(--navy); }
+.top-card__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.625rem; margin-top: 0.625rem; }
+.top-card__rating { display: flex; align-items: center; gap: 0.5rem; margin-right: 0.25rem; padding-right: 0.875rem; border-right: 1px solid var(--line-strong); }
+.top-card__rating strong { font-size: 1.375rem; font-weight: 700; line-height: 1; letter-spacing: -0.02em; color: var(--navy); }
+.top-card__rating .stars { margin: 0; }
+.top-card__reviews { font-size: 0.9375rem; color: var(--navy); text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; }
+.top-card__reviews--none { color: var(--slate); text-decoration: none; }
+.top-card__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.3125rem 0.75rem 0.3125rem 0.625rem;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: var(--navy);
+  background: var(--cream);
+  border-radius: var(--radius-pill);
+}
+.top-card__chip .icon { width: 15px; height: 15px; flex-shrink: 0; }
+.top-card__chip strong { font-weight: 700; }
+.top-card__chip--ok .icon { stroke-width: 2.25; }
+.top-card__missing { font-style: italic; color: var(--slate); }
+.top-card__text { max-width: 78ch; margin-top: 0.75rem; color: var(--slate); }
+.top-card__text strong { font-weight: 600; color: var(--navy); }
+.top-card__cta { white-space: nowrap; }   /* the site's standard yellow button (.btn .btn--primary), nothing added */
+
+/* Points forts: cream strip under the card body */
+.top-card__points {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.625rem 1rem;
+  padding: 1rem var(--pad-x);
+  background: var(--cream);
+  border-top: 1px solid var(--line);
+  border-radius: 0 0 calc(var(--radius-lg) - 1px) calc(var(--radius-lg) - 1px);
+}
+.top-card__label { font-size: 0.9375rem; font-weight: 600; color: var(--navy); }
+.top-card__points ul { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.top-card__points li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4375rem 0.875rem 0.4375rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--navy);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+}
+.top-card__points .icon { flex-shrink: 0; width: 18px; height: 18px; padding: 3px; stroke-width: 2.75; color: var(--navy); background: var(--yellow); border-radius: 50%; }
+
+@media (max-width: 899px) {   /* tablets: the button goes full width under the text */
+  .top-card__main { grid-template-columns: auto minmax(0, 1fr); }
+  .top-card__cta { grid-column: 1 / -1; width: 100%; margin-top: 1.25rem; }
+}
+@media (max-width: 599px) {   /* phones: logo + name on one row, the rest full width */
+  .top-card__main { column-gap: 1rem; padding-top: 1.625rem; }
+  .top-card .company-logo { align-self: center; width: 64px; height: 64px; padding: 7px; border-radius: 14px; }
+  .top-card .company-logo--mono { font-size: 1.375rem; }
+  .top-card__body { display: contents; }
+  .top-card__name { align-self: center; }
+  .top-card__meta, .top-card__text { grid-column: 1 / -1; }
+  .top-card__meta { margin-top: 1rem; }
+  .top-card__rating { flex-basis: 100%; margin-right: 0; padding-right: 0; border-right: 0; }   /* rating on its own line, chips under it */
+  .top-card__points { flex-direction: column; align-items: flex-start; }
+  .top-card__points ul { flex-direction: column; align-items: flex-start; }
+}
+
 /* ---- Comparison table: real <table>. On small screens the whole table slides
    sideways as one piece (swipe, trackpad, keyboard); no visible scrollbar ---- */
 .table-scroll {

@@ -231,166 +231,16 @@
       </div>
     </section>
 
-    <!-- BLOC 3 — Top 5: one compact card per company.
-         Partners (Google Sheet « Client Flash #1–#5 ») get a DoFollow « Visiter le site » link; the others no link. -->
-    <section class="section section--white section--top5" aria-labelledby="top-title">
+    <!-- BLOC 3 — Top 5: comparison table right after the hero, directly under its title (real <table>; the whole table slides
+         sideways on small screens, no visible scrollbar; an empty cell = no verified information) -->
+    <section class="section section--white section--top5 section--table" aria-labelledby="top-title">
       <div class="container">
         <header class="section-head section-head--one-line" data-reveal>
           <div class="section-head__main">
             <h2 class="section-head__title" id="top-title">Top 5 des meilleures entreprises sanitaires à Fribourg</h2>
           </div>
         </header>
-        <ol class="ranking ranking--compact">
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">1</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">1. </span>MSCV SA</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 18 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Entreprise installée à la route du Tir-Fédéral, à Givisiez, dans le canton de Fribourg. Elle intervient en sanitaire et en chauffage pour les particuliers et les entreprises.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Sanitaire et chauffage</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Travaux pour particuliers et entreprises</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Présence dans l'agglomération fribourgeoise</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">2</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">2. </span>Maintenance Mugny &amp; Marguet SA</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 13 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Entreprise installée à la route du Jura, à Fribourg. Elle réalise l'installation et l'entretien d'appareils sanitaires.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Installation sanitaire</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Entretien</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Présence à Fribourg</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">3</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">3. </span>Immo-maintenance SA</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 12 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Entreprise installée à la route de la Glâne, à Villars-sur-Glâne, dans le canton de Fribourg. Elle intervient en sanitaire et en chauffage pour les immeubles locatifs.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Sanitaire et chauffage</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Entretien d'immeubles locatifs</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Présence dans l'agglomération fribourgeoise</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">4</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">4. </span>Cossa Cotting Sanitaires SA</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.5" aria-hidden="true"></span><span><strong>4,5/5</strong> · 37 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Entreprise installée au chemin des Rosiers, à Granges-Paccot, dans le canton de Fribourg. Elle réalise l'installation d'appareils sanitaires et des travaux de rénovation.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Installation sanitaire</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Rénovation</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Présence dans l'agglomération fribourgeoise</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">5</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">5. </span>VCS Maintenance SA</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.7" aria-hidden="true"></span><span><strong>4,7/5</strong> · 16 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Entreprise installée à la route du Mont-Carmel, à Givisiez, dans le canton de Fribourg. Elle assure l'entretien et le dépannage d'installations sanitaires.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Entretien d'installations sanitaires</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Dépannage</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Présence dans l'agglomération fribourgeoise</span></li></ul>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- BLOC 4 — selection criteria (homepage criteria component) -->
-    <section class="section section--cream" aria-labelledby="selection-title">
-      <div class="container">
-        <header class="section-head" data-reveal>
-          <div class="section-head__main">
-            <h2 class="section-head__title" id="selection-title">Comment nous avons sélectionné les meilleures entreprises sanitaires à Fribourg</h2>
-          </div>
-          <div class="section-head__aside">
-            <a class="btn btn--primary section-head__cta" href="/methodologie/">Voir notre méthodologie complète</a>
-          </div>
-        </header>
-        <ul class="criteria criteria--compact" data-reveal>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reviews"></use></svg></span>
-            <h3 class="criterion__title">Avis clients</h3>
-            <p class="criterion__text">Note et nombre d'avis Google de l'entreprise, relevés à la date de mise à jour. Une entreprise doit compter au moins 5 avis pour être classée.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-expertise"></use></svg></span>
-            <h3 class="criterion__title">Expertise</h3>
-            <p class="criterion__text">Maîtrise fédérale, CFC d'installateur sanitaire et adhésion à suissetec, quand l'information est publique.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reliability"></use></svg></span>
-            <h3 class="criterion__title">Fiabilité</h3>
-            <p class="criterion__text">Inscription au registre du commerce et ancienneté de l'entreprise.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-local"></use></svg></span>
-            <h3 class="criterion__title">Présence locale</h3>
-            <p class="criterion__text">Atelier ou bureau à Fribourg ou ailleurs dans le canton de Fribourg.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-pricing"></use></svg></span>
-            <h3 class="criterion__title">Transparence tarifaire</h3>
-            <p class="criterion__text">Tarifs horaires, forfaits de dépannage ou offre gratuite publiés sur le site de l'entreprise.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- BLOC 5 — comparison table, directly under its title (real <table>; the whole table slides
-         sideways on small screens, no visible scrollbar; an empty cell = no verified information) -->
-    <section class="section section--white section--table" aria-labelledby="table-title">
-      <div class="container">
-        <header class="section-head section-head--one-line" data-reveal>
-          <div class="section-head__main">
-            <h2 class="section-head__title" id="table-title">Comparatif des meilleures entreprises sanitaires à Fribourg</h2>
-          </div>
-        </header>
-        <div class="table-scroll" role="region" aria-labelledby="table-title" tabindex="0" data-reveal>
+        <div class="table-scroll" role="region" aria-labelledby="top-title" tabindex="0" data-reveal>
           <table class="compare-table">
             <thead>
               <tr>
@@ -452,6 +302,167 @@
             </tbody>
           </table>
         </div>
+      </div>
+    </section>
+
+    <!-- BLOC 4 — selection criteria (homepage criteria component) -->
+    <section class="section section--cream" aria-labelledby="selection-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div class="section-head__main">
+            <h2 class="section-head__title" id="selection-title">Comment nous avons sélectionné les meilleures entreprises sanitaires à Fribourg</h2>
+          </div>
+          <div class="section-head__aside">
+            <a class="btn btn--primary section-head__cta" href="/methodologie/">Voir notre méthodologie complète</a>
+          </div>
+        </header>
+        <ul class="criteria criteria--compact" data-reveal>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reviews"></use></svg></span>
+            <h3 class="criterion__title">Avis clients</h3>
+            <p class="criterion__text">Note et nombre d'avis Google de l'entreprise, relevés à la date de mise à jour. Une entreprise doit compter au moins 5 avis pour être classée.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-expertise"></use></svg></span>
+            <h3 class="criterion__title">Expertise</h3>
+            <p class="criterion__text">Maîtrise fédérale, CFC d'installateur sanitaire et adhésion à suissetec, quand l'information est publique.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reliability"></use></svg></span>
+            <h3 class="criterion__title">Fiabilité</h3>
+            <p class="criterion__text">Inscription au registre du commerce et ancienneté de l'entreprise.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-local"></use></svg></span>
+            <h3 class="criterion__title">Présence locale</h3>
+            <p class="criterion__text">Atelier ou bureau à Fribourg ou ailleurs dans le canton de Fribourg.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-pricing"></use></svg></span>
+            <h3 class="criterion__title">Transparence tarifaire</h3>
+            <p class="criterion__text">Tarifs horaires, forfaits de dépannage ou offre gratuite publiés sur le site de l'entreprise.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BLOC 5 — « Comparatif »: one white card per company (Margaux's mockup): « N°x » tab · logo (or initials) · name ·
+         rating + « Fondée en » + « Entreprise enregistrée » chips · text with key facts in bold · « Visiter le site »
+         on the right (partners only, DoFollow — Google Sheet « Client Flash #1–#5 ») · « Points forts » pills in a cream strip. -->
+    <section class="section section--white" aria-labelledby="comparatif-title">
+      <div class="container">
+        <header class="section-head section-head--one-line" data-reveal>
+          <div class="section-head__main">
+            <h2 class="section-head__title" id="comparatif-title">Comparatif des meilleures entreprises sanitaires à Fribourg</h2>
+          </div>
+        </header>
+        <ol class="ranking ranking--feature">
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°1</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">MS</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">1. </span>MSCV SA</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>5,0</strong><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="top-card__reviews">18 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Entreprise installée à la <strong>route du Tir-Fédéral</strong>, à Givisiez, dans le canton de Fribourg. Elle intervient en sanitaire et en chauffage pour les particuliers et les entreprises.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.mscv.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Sanitaire et chauffage</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Travaux pour particuliers et entreprises</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Présence dans l'agglomération fribourgeoise</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°2</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">MM</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">2. </span>Maintenance Mugny &amp; Marguet SA</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>5,0</strong><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="top-card__reviews">13 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Entreprise installée à la <strong>route du Jura</strong>, à Fribourg. Elle réalise l'installation et l'entretien d'appareils sanitaires.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.mugny-marguet.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Installation sanitaire</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entretien</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Présence à Fribourg</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°3</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">IM</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">3. </span>Immo-maintenance SA</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>5,0</strong><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="top-card__reviews">12 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Entreprise installée à la <strong>route de la Glâne</strong>, à Villars-sur-Glâne, dans le canton de Fribourg. Elle intervient en sanitaire et en chauffage pour les immeubles locatifs.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.local.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Sanitaire et chauffage</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entretien d'immeubles locatifs</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Présence dans l'agglomération fribourgeoise</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°4</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">CC</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">4. </span>Cossa Cotting Sanitaires SA</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,5</strong><span class="stars" style="--rating: 4.5" aria-hidden="true"></span><span class="top-card__reviews">37 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Entreprise installée au <strong>chemin des Rosiers</strong>, à Granges-Paccot, dans le canton de Fribourg. Elle réalise l'installation d'appareils sanitaires et des travaux de rénovation.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.cossacotting.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Installation sanitaire</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Rénovation</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Présence dans l'agglomération fribourgeoise</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°5</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">VM</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">5. </span>VCS Maintenance SA</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,7</strong><span class="stars" style="--rating: 4.7" aria-hidden="true"></span><span class="top-card__reviews">16 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Entreprise installée à la <strong>route du Mont-Carmel</strong>, à Givisiez, dans le canton de Fribourg. Elle assure l'entretien et le dépannage d'installations sanitaires.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.local.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entretien d'installations sanitaires</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Dépannage</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Présence dans l'agglomération fribourgeoise</li></ul>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 

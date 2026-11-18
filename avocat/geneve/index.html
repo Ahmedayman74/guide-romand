@@ -231,172 +231,16 @@
       </div>
     </section>
 
-    <!-- BLOC 3 — Top 5: one compact card per company.
-         Partners (Google Sheet « Client Flash #1–#5 ») get a DoFollow « Visiter le site » link; the others no link. -->
-    <section class="section section--white section--top5" aria-labelledby="top-title">
+    <!-- BLOC 3 — Top 5: comparison table right after the hero, directly under its title (real <table>; the whole table slides
+         sideways on small screens, no visible scrollbar; an empty cell = no verified information) -->
+    <section class="section section--white section--top5 section--table" aria-labelledby="top-title">
       <div class="container">
         <header class="section-head section-head--one-line" data-reveal>
           <div class="section-head__main">
             <h2 class="section-head__title" id="top-title">Top 5 des meilleurs avocats à Genève</h2>
           </div>
         </header>
-        <ol class="ranking ranking--compact">
-          <!-- partner: DoFollow link -->
-          <li class="company-card company-card--partner" data-reveal>
-            <div class="company-logo company-logo--dark"><img src="../../images/logos/keppeler-avocats.png" alt="Logo Keppeler Avocats" loading="lazy" decoding="async"><span class="company-logo__rank" aria-hidden="true">1</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">1. </span>Keppeler Avocats</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.3" aria-hidden="true"></span><span><strong>4,3/5</strong> · 13 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd>1962</dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Étude fondée en 1962 par Me Bruno Keppeler, installée rue Ferdinand-Hodler. Une quinzaine d'avocats y pratiquent le droit pénal, le droit civil et commercial et le droit de la famille.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Active depuis 1962</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Équipe d'une quinzaine d'avocats</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit pénal et droit civil et commercial</span></li></ul>
-              </div>
-            </div>
-            <div class="company-card__action">
-              <a class="btn btn--primary" href="https://www.keplaw.ch/">Visiter le site</a>
-            </div>
-          </li>
-          <!-- partner: DoFollow link -->
-          <li class="company-card company-card--partner" data-reveal>
-            <div class="company-logo company-logo--dark"><img src="../../images/logos/tabet-law.png" alt="Logo Tabet Law" loading="lazy" decoding="async"><span class="company-logo__rank" aria-hidden="true">2</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">2. </span>Tabet Law</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.5" aria-hidden="true"></span><span><strong>4,5/5</strong> · 34 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd>2023</dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Étude fondée en 2023 par Me Samy Tabet, qui conseille avec Me Giulia Borro en droit pénal, droit des affaires et contentieux. Installée au centre de Genève.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit pénal général et des affaires</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Contentieux civil et pénal</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Conseil et plaidoirie</span></li></ul>
-              </div>
-            </div>
-            <div class="company-card__action">
-              <a class="btn btn--primary" href="https://tabet.law/">Visiter le site</a>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><img src="../../images/logos/fr-avocats.png" alt="Logo FR Avocats" loading="lazy" decoding="async"><span class="company-logo__rank" aria-hidden="true">3</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">3. </span>FR Avocats</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.8" aria-hidden="true"></span><span><strong>4,8/5</strong> · 53 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Étude installée à l'avenue de Frontenex, réunissant Mes Fanny Roulet, Alain Miserez et Mélanie Lopes de Brito. Elle intervient en responsabilité civile, en droit du travail, en droit pénal et en droit de la famille.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Responsabilité civile et droit du travail</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit pénal</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit de la famille</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><img src="../../images/logos/rvmh-avocats.png" alt="Logo RVMH Avocats" loading="lazy" decoding="async"><span class="company-logo__rank" aria-hidden="true">4</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">4. </span>RVMH Avocats</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.6" aria-hidden="true"></span><span><strong>4,6/5</strong> · 7 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd>2012</dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Étude fondée en 2012, installée rue Gourgas, à Genève. Elle est active en droit pénal économique, en contentieux civil et commercial, ainsi qu'en droit des successions.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit pénal économique</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Contentieux civil et commercial</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit des successions</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><img src="../../images/logos/ducrest-heggli-avocats-llc.svg" alt="Logo Ducrest Heggli Avocats LLC" loading="lazy" decoding="async"><span class="company-logo__rank" aria-hidden="true">5</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">5. </span>Ducrest Heggli Avocats LLC</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 10 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd>2010</dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Étude fondée en 2010 par Mes Jean-François Ducrest et Carl Heggli, installée rue Kitty-Ponse, à Genève. Elle est active en droit des sociétés, en droit pénal économique et en fiscalité.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit des sociétés et contentieux commercial</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Droit pénal économique et arbitrage</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Fiscalité et planification successorale</span></li></ul>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- BLOC 4 — selection criteria (homepage criteria component) -->
-    <section class="section section--cream" aria-labelledby="selection-title">
-      <div class="container">
-        <header class="section-head" data-reveal>
-          <div class="section-head__main">
-            <h2 class="section-head__title" id="selection-title">Comment nous avons sélectionné les meilleurs avocats à Genève</h2>
-          </div>
-          <div class="section-head__aside">
-            <a class="btn btn--primary section-head__cta" href="/methodologie/">Voir notre méthodologie complète</a>
-          </div>
-        </header>
-        <ul class="criteria criteria--compact" data-reveal>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reviews"></use></svg></span>
-            <h3 class="criterion__title">Avis clients</h3>
-            <p class="criterion__text">Note et nombre d'avis Google de l'étude, relevés à la date de mise à jour. Une étude doit compter au moins 5 avis pour être classée.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-expertise"></use></svg></span>
-            <h3 class="criterion__title">Expertise</h3>
-            <p class="criterion__text">Titres vérifiables des avocats de l'étude, comme avocat spécialiste FSA ou médiateur FSA.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reliability"></use></svg></span>
-            <h3 class="criterion__title">Fiabilité</h3>
-            <p class="criterion__text">Ancienneté de l'étude et inscription de ses avocats au registre cantonal genevois des avocats.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-local"></use></svg></span>
-            <h3 class="criterion__title">Présence locale</h3>
-            <p class="criterion__text">Bureau à Genève ou ailleurs dans le canton de Genève.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-pricing"></use></svg></span>
-            <h3 class="criterion__title">Tarification transparente</h3>
-            <p class="criterion__text">Ce critère n'entre pas dans le calcul pour les avocats : la plupart des études ne publient pas leurs tarifs.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- BLOC 5 — comparison table, directly under its title (real <table>; the whole table slides
-         sideways on small screens, no visible scrollbar; an empty cell = no verified information) -->
-    <section class="section section--white section--table" aria-labelledby="table-title">
-      <div class="container">
-        <header class="section-head section-head--one-line" data-reveal>
-          <div class="section-head__main">
-            <h2 class="section-head__title" id="table-title">Comparatif des meilleurs avocats à Genève</h2>
-          </div>
-        </header>
-        <div class="table-scroll" role="region" aria-labelledby="table-title" tabindex="0" data-reveal>
+        <div class="table-scroll" role="region" aria-labelledby="top-title" tabindex="0" data-reveal>
           <table class="compare-table">
             <thead>
               <tr>
@@ -458,6 +302,167 @@
             </tbody>
           </table>
         </div>
+      </div>
+    </section>
+
+    <!-- BLOC 4 — selection criteria (homepage criteria component) -->
+    <section class="section section--cream" aria-labelledby="selection-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div class="section-head__main">
+            <h2 class="section-head__title" id="selection-title">Comment nous avons sélectionné les meilleurs avocats à Genève</h2>
+          </div>
+          <div class="section-head__aside">
+            <a class="btn btn--primary section-head__cta" href="/methodologie/">Voir notre méthodologie complète</a>
+          </div>
+        </header>
+        <ul class="criteria criteria--compact" data-reveal>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reviews"></use></svg></span>
+            <h3 class="criterion__title">Avis clients</h3>
+            <p class="criterion__text">Note et nombre d'avis Google de l'étude, relevés à la date de mise à jour. Une étude doit compter au moins 5 avis pour être classée.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-expertise"></use></svg></span>
+            <h3 class="criterion__title">Expertise</h3>
+            <p class="criterion__text">Titres vérifiables des avocats de l'étude, comme avocat spécialiste FSA ou médiateur FSA.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reliability"></use></svg></span>
+            <h3 class="criterion__title">Fiabilité</h3>
+            <p class="criterion__text">Ancienneté de l'étude et inscription de ses avocats au registre cantonal genevois des avocats.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-local"></use></svg></span>
+            <h3 class="criterion__title">Présence locale</h3>
+            <p class="criterion__text">Bureau à Genève ou ailleurs dans le canton de Genève.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-pricing"></use></svg></span>
+            <h3 class="criterion__title">Tarification transparente</h3>
+            <p class="criterion__text">Ce critère n'entre pas dans le calcul pour les avocats : la plupart des études ne publient pas leurs tarifs.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BLOC 5 — « Comparatif »: one white card per company (Margaux's mockup): « N°x » tab · logo · name ·
+         rating + « Fondée en » + « Entreprise enregistrée » chips · text with key facts in bold · « Visiter le site »
+         on the right (partners only, DoFollow — Google Sheet « Client Flash #1–#5 ») · « Points forts » pills in a cream strip. -->
+    <section class="section section--white" aria-labelledby="comparatif-title">
+      <div class="container">
+        <header class="section-head section-head--one-line" data-reveal>
+          <div class="section-head__main">
+            <h2 class="section-head__title" id="comparatif-title">Comparatif des meilleurs avocats à Genève</h2>
+          </div>
+        </header>
+        <ol class="ranking ranking--feature">
+          <!-- partner: DoFollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°1</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--dark"><img src="../../images/logos/keppeler-avocats.png" alt="Logo Keppeler Avocats" loading="lazy" decoding="async"></div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">1. </span>Keppeler Avocats</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,3</strong><span class="stars" style="--rating: 4.3" aria-hidden="true"></span><span class="top-card__reviews">13 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en <strong>1962</strong></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Étude fondée en 1962 par <strong>Me Bruno Keppeler</strong>, installée rue Ferdinand-Hodler. <strong>Une quinzaine d'avocats</strong> y pratiquent le droit pénal, le droit civil et commercial et le droit de la famille.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.keplaw.ch/">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Active depuis 1962</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Équipe d'une quinzaine d'avocats</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Droit pénal et droit civil et commercial</li></ul>
+            </div>
+          </li>
+          <!-- partner: DoFollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°2</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--dark"><img src="../../images/logos/tabet-law.png" alt="Logo Tabet Law" loading="lazy" decoding="async"></div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">2. </span>Tabet Law</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,5</strong><span class="stars" style="--rating: 4.5" aria-hidden="true"></span><span class="top-card__reviews">34 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en <strong>2023</strong></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Étude fondée en 2023 par <strong>Me Samy Tabet</strong>, qui conseille avec <strong>Me Giulia Borro</strong> en droit pénal, droit des affaires et contentieux. Installée au centre de Genève.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://tabet.law/">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Droit pénal général et des affaires</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Contentieux civil et pénal</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Conseil et plaidoirie</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°3</span>
+            <div class="top-card__main">
+              <div class="company-logo"><img src="../../images/logos/fr-avocats.png" alt="Logo FR Avocats" loading="lazy" decoding="async"></div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">3. </span>FR Avocats</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,8</strong><span class="stars" style="--rating: 4.8" aria-hidden="true"></span><span class="top-card__reviews">53 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Étude installée à l'avenue de Frontenex, réunissant <strong>Mes Fanny Roulet, Alain Miserez et Mélanie Lopes de Brito</strong>. Elle intervient en responsabilité civile, en droit du travail, en droit pénal et en droit de la famille.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.fravocats.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Responsabilité civile et droit du travail</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Droit pénal</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Droit de la famille</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°4</span>
+            <div class="top-card__main">
+              <div class="company-logo"><img src="../../images/logos/rvmh-avocats.png" alt="Logo RVMH Avocats" loading="lazy" decoding="async"></div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">4. </span>RVMH Avocats</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,6</strong><span class="stars" style="--rating: 4.6" aria-hidden="true"></span><span class="top-card__reviews">7 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en <strong>2012</strong></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Étude <strong>fondée en 2012</strong>, installée rue Gourgas, à Genève. Elle est active en <strong>droit pénal économique</strong>, en contentieux civil et commercial, ainsi qu'en droit des successions.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.rvmh.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Droit pénal économique</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Contentieux civil et commercial</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Droit des successions</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°5</span>
+            <div class="top-card__main">
+              <div class="company-logo"><img src="../../images/logos/ducrest-heggli-avocats-llc.svg" alt="Logo Ducrest Heggli Avocats LLC" loading="lazy" decoding="async"></div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">5. </span>Ducrest Heggli Avocats LLC</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>5,0</strong><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="top-card__reviews">10 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en <strong>2010</strong></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Étude fondée en 2010 par <strong>Mes Jean-François Ducrest et Carl Heggli</strong>, installée rue Kitty-Ponse, à Genève. Elle est active en droit des sociétés, en droit pénal économique et en fiscalité.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.ducrestheggli.com/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Droit des sociétés et contentieux commercial</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Droit pénal économique et arbitrage</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Fiscalité et planification successorale</li></ul>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 

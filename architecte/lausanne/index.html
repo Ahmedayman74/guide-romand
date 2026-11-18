@@ -231,172 +231,16 @@
       </div>
     </section>
 
-    <!-- BLOC 3 — Top 5: one compact card per company.
-         Partners (Google Sheet « Client Flash #1–#5 ») get a DoFollow « Visiter le site » link; the others no link. -->
-    <section class="section section--white section--top5" aria-labelledby="top-title">
+    <!-- BLOC 3 — Top 5: comparison table right after the hero, directly under its title (real <table>; the whole table slides
+         sideways on small screens, no visible scrollbar; an empty cell = no verified information) -->
+    <section class="section section--white section--top5 section--table" aria-labelledby="top-title">
       <div class="container">
         <header class="section-head section-head--one-line" data-reveal>
           <div class="section-head__main">
             <h2 class="section-head__title" id="top-title">Top 5 des meilleurs architectes à Lausanne</h2>
           </div>
         </header>
-        <ol class="ranking ranking--compact">
-          <!-- partner: DoFollow link -->
-          <li class="company-card company-card--partner" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">1</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">1. </span>Atelier Commun SA</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.8" aria-hidden="true"></span><span><strong>4,8/5</strong> · 23 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Bureau d'architecture installé à la rue du Simplon, à Lausanne. Il accompagne ses clients sur des projets de rénovation et de transformation, de l'esquisse jusqu'au suivi du chantier.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Accompagnement en rénovation et transformation</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Suivi de projet jusqu'au chantier</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Équipe réactive selon les avis clients</span></li></ul>
-              </div>
-            </div>
-            <div class="company-card__action">
-              <a class="btn btn--primary" href="https://ateliercommun.ch/">Visiter le site</a>
-            </div>
-          </li>
-          <!-- partner: DoFollow link -->
-          <li class="company-card company-card--partner" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">2</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">2. </span>Charles Jenny Architecte Sàrl</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 6 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Bureau d'un seul architecte, installé à la rue Mauborget, au centre de Lausanne. Il suit personnellement chaque projet, de l'esquisse jusqu'aux visuels définitifs.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Suivi personnalisé du projet</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Visuels et esquisses soignés</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Bureau au centre de Lausanne</span></li></ul>
-              </div>
-            </div>
-            <div class="company-card__action">
-              <a class="btn btn--primary" href="https://charlesjenny.ch/">Visiter le site</a>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">3</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">3. </span>CCHE Architecture and Design SA</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.8" aria-hidden="true"></span><span><strong>4,8/5</strong> · 53 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Bureau du groupe CCHE, installé à la rue du Grand-Pré, à Lausanne, avec d'autres antennes en Suisse romande, notamment à Nyon et à Genève. Il intervient sur des projets de toutes tailles, du logement aux bâtiments publics.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Antennes à Nyon et à Genève</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Projets de toutes tailles</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Logement et bâtiments publics</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">4</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">4. </span>Winthrop Locher Partners</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 16 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Bureau installé à la place de l'Europe, au centre de Lausanne. Il intervient en architecture et en direction des travaux pour des projets privés et professionnels.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Bureau au centre de Lausanne</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Architecture et direction des travaux</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Projets privés et professionnels</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">5</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">5. </span>ANG - Architecture Nilton Guerreiro</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span><strong>4,9/5</strong> · 10 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Bureau installé à l'avenue Édouard-Dapples, actif à Lausanne et à Morges. Il accompagne des projets de construction et de rénovation pour des particuliers.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Bureau à Lausanne et à Morges</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Construction et rénovation</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Accompagnement de particuliers</span></li></ul>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- BLOC 4 — selection criteria (homepage criteria component) -->
-    <section class="section section--cream" aria-labelledby="selection-title">
-      <div class="container">
-        <header class="section-head" data-reveal>
-          <div class="section-head__main">
-            <h2 class="section-head__title" id="selection-title">Comment nous avons sélectionné les meilleurs architectes à Lausanne</h2>
-          </div>
-          <div class="section-head__aside">
-            <a class="btn btn--primary section-head__cta" href="/methodologie/">Voir notre méthodologie complète</a>
-          </div>
-        </header>
-        <ul class="criteria criteria--compact" data-reveal>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reviews"></use></svg></span>
-            <h3 class="criterion__title">Avis clients</h3>
-            <p class="criterion__text">Note et nombre d'avis Google du bureau, relevés à la date de mise à jour. Un bureau doit compter au moins 5 avis pour être classé.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-expertise"></use></svg></span>
-            <h3 class="criterion__title">Expertise</h3>
-            <p class="criterion__text">Inscription au REG, adhésion à la SIA ou à la FAS, vérifiées à partir du site du bureau.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reliability"></use></svg></span>
-            <h3 class="criterion__title">Fiabilité</h3>
-            <p class="criterion__text">Ancienneté du bureau et inscription au registre du commerce.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-local"></use></svg></span>
-            <h3 class="criterion__title">Présence locale</h3>
-            <p class="criterion__text">Bureau à Lausanne ou ailleurs dans le canton de Vaud.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-pricing"></use></svg></span>
-            <h3 class="criterion__title">Tarification transparente</h3>
-            <p class="criterion__text">Ce critère n'entre pas dans le calcul pour les architectes : les bureaux publient rarement leurs honoraires.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- BLOC 5 — comparison table, directly under its title (real <table>; the whole table slides
-         sideways on small screens, no visible scrollbar; an empty cell = no verified information) -->
-    <section class="section section--white section--table" aria-labelledby="table-title">
-      <div class="container">
-        <header class="section-head section-head--one-line" data-reveal>
-          <div class="section-head__main">
-            <h2 class="section-head__title" id="table-title">Comparatif des meilleurs architectes à Lausanne</h2>
-          </div>
-        </header>
-        <div class="table-scroll" role="region" aria-labelledby="table-title" tabindex="0" data-reveal>
+        <div class="table-scroll" role="region" aria-labelledby="top-title" tabindex="0" data-reveal>
           <table class="compare-table">
             <thead>
               <tr>
@@ -458,6 +302,167 @@
             </tbody>
           </table>
         </div>
+      </div>
+    </section>
+
+    <!-- BLOC 4 — selection criteria (homepage criteria component) -->
+    <section class="section section--cream" aria-labelledby="selection-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div class="section-head__main">
+            <h2 class="section-head__title" id="selection-title">Comment nous avons sélectionné les meilleurs architectes à Lausanne</h2>
+          </div>
+          <div class="section-head__aside">
+            <a class="btn btn--primary section-head__cta" href="/methodologie/">Voir notre méthodologie complète</a>
+          </div>
+        </header>
+        <ul class="criteria criteria--compact" data-reveal>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reviews"></use></svg></span>
+            <h3 class="criterion__title">Avis clients</h3>
+            <p class="criterion__text">Note et nombre d'avis Google du bureau, relevés à la date de mise à jour. Un bureau doit compter au moins 5 avis pour être classé.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-expertise"></use></svg></span>
+            <h3 class="criterion__title">Expertise</h3>
+            <p class="criterion__text">Inscription au REG, adhésion à la SIA ou à la FAS, vérifiées à partir du site du bureau.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reliability"></use></svg></span>
+            <h3 class="criterion__title">Fiabilité</h3>
+            <p class="criterion__text">Ancienneté du bureau et inscription au registre du commerce.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-local"></use></svg></span>
+            <h3 class="criterion__title">Présence locale</h3>
+            <p class="criterion__text">Bureau à Lausanne ou ailleurs dans le canton de Vaud.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-pricing"></use></svg></span>
+            <h3 class="criterion__title">Tarification transparente</h3>
+            <p class="criterion__text">Ce critère n'entre pas dans le calcul pour les architectes : les bureaux publient rarement leurs honoraires.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BLOC 5 — « Comparatif »: one white card per company (Margaux's mockup): « N°x » tab · logo (or initials) · name ·
+         rating + « Fondée en » + « Entreprise enregistrée » chips · text with key facts in bold · « Visiter le site »
+         on the right (partners only, DoFollow — Google Sheet « Client Flash #1–#5 ») · « Points forts » pills in a cream strip. -->
+    <section class="section section--white" aria-labelledby="comparatif-title">
+      <div class="container">
+        <header class="section-head section-head--one-line" data-reveal>
+          <div class="section-head__main">
+            <h2 class="section-head__title" id="comparatif-title">Comparatif des meilleurs architectes à Lausanne</h2>
+          </div>
+        </header>
+        <ol class="ranking ranking--feature">
+          <!-- partner: DoFollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°1</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">CO</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">1. </span>Atelier Commun SA</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,8</strong><span class="stars" style="--rating: 4.8" aria-hidden="true"></span><span class="top-card__reviews">23 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Bureau d'architecture installé à la <strong>rue du Simplon</strong>, à Lausanne. Il accompagne ses clients sur des projets de rénovation et de transformation, de l'esquisse jusqu'au suivi du chantier.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://ateliercommun.ch/">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Accompagnement en rénovation et transformation</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Suivi de projet jusqu'au chantier</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Équipe réactive selon les avis clients</li></ul>
+            </div>
+          </li>
+          <!-- partner: DoFollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°2</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">CJ</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">2. </span>Charles Jenny Architecte Sàrl</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>5,0</strong><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="top-card__reviews">6 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Bureau d'un seul architecte, installé à la <strong>rue Mauborget</strong>, au centre de Lausanne. Il suit personnellement chaque projet, de l'esquisse jusqu'aux visuels définitifs.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://charlesjenny.ch/">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Suivi personnalisé du projet</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Visuels et esquisses soignés</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Bureau au centre de Lausanne</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°3</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">CA</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">3. </span>CCHE Architecture and Design SA</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,8</strong><span class="stars" style="--rating: 4.8" aria-hidden="true"></span><span class="top-card__reviews">53 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Bureau du groupe CCHE, installé à la <strong>rue du Grand-Pré</strong>, à Lausanne, avec d'autres antennes en Suisse romande, notamment à Nyon et à Genève. Il intervient sur des projets de toutes tailles, du logement aux bâtiments publics.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://cche.com/fr/filiales/lausanne" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Antennes à Nyon et à Genève</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Projets de toutes tailles</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Logement et bâtiments publics</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°4</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">WL</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">4. </span>Winthrop Locher Partners</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>5,0</strong><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="top-card__reviews">16 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Bureau installé à la <strong>place de l'Europe</strong>, au centre de Lausanne. Il intervient en architecture et en direction des travaux pour des projets privés et professionnels.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.flon.ch/fr/locataires/design-art-architecture/4/architecture/21/winthrop-locher-partners/98" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Bureau au centre de Lausanne</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Architecture et direction des travaux</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Projets privés et professionnels</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°5</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">AA</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">5. </span>ANG - Architecture Nilton Guerreiro</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,9</strong><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span class="top-card__reviews">10 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Bureau installé à l'<strong>avenue Édouard-Dapples</strong>, actif à Lausanne et à Morges. Il accompagne des projets de construction et de rénovation pour des particuliers.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.local.ch/fr/d/lausanne/1006/architectural-firm/ang-architecture-nilton-guerreiro-vEUjEnNPsK1fAgafeRceTQ" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Bureau à Lausanne et à Morges</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Construction et rénovation</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Accompagnement de particuliers</li></ul>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 

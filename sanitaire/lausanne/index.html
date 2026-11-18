@@ -231,169 +231,16 @@
       </div>
     </section>
 
-    <!-- BLOC 3 — Top 5: one compact card per company.
-         Partners (Google Sheet « Client Flash #1–#5 ») get a DoFollow « Visiter le site » link; the others no link. -->
-    <section class="section section--white section--top5" aria-labelledby="top-title">
+    <!-- BLOC 3 — Top 5: comparison table right after the hero, directly under its title (real <table>; the whole table slides
+         sideways on small screens, no visible scrollbar; an empty cell = no verified information) -->
+    <section class="section section--white section--top5 section--table" aria-labelledby="top-title">
       <div class="container">
         <header class="section-head section-head--one-line" data-reveal>
           <div class="section-head__main">
             <h2 class="section-head__title" id="top-title">Top 5 des meilleures entreprises sanitaires à Lausanne</h2>
           </div>
         </header>
-        <ol class="ranking ranking--compact">
-          <!-- partner: DoFollow link -->
-          <li class="company-card company-card--partner" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">1</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">1. </span>Frangu Sàrl</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 34 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Entreprise installée au chemin du Bois-Gentil, à Lausanne. Elle intervient pour l'installation d'appareils sanitaires et la rénovation de salles de bains, notamment le remplacement d'une baignoire par une douche.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Rénovation de salles de bains</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Remplacement de baignoire par une douche</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Intervention à Lausanne et environs</span></li></ul>
-              </div>
-            </div>
-            <div class="company-card__action">
-              <a class="btn btn--primary" href="https://frangu.ch/">Visiter le site</a>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">2</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">2. </span>Sani-Ther Sàrl</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 142 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Entreprise installée au chemin de Maillefer, à Lausanne. Elle réalise des travaux d'installation et de dépannage sanitaire pour les particuliers et les régies.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Installation sanitaire</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Dépannage</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Travaux pour particuliers et régies</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">3</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">3. </span>FRB Frères Sàrl</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span><strong>4,9/5</strong> · 91 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Entreprise installée au chemin de la Vuachère, à Lausanne, disponible 24h/24. Elle intervient pour le dépannage de plomberie et des installations de chauffage, dont la pose de pompes à chaleur.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Dépannage de plomberie 24h/24</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Installations de chauffage</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Pompes à chaleur</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">4</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">4. </span>Saniluxe Salles de bains Lausanne</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span><strong>4,9/5</strong> · 49 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Entreprise installée au chemin de Praz-Longet, au Mont-sur-Lausanne, spécialisée dans la rénovation complète de salles de bains.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Rénovation complète de salle de bains</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Devis après visite</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Présence dans l'agglomération lausannoise</span></li></ul>
-              </div>
-            </div>
-          </li>
-          <!-- not a partner: no link -->
-          <li class="company-card" data-reveal>
-            <div class="company-logo"><span class="company-logo__rank" aria-hidden="true">5</span></div>
-            <div class="company-card__body">
-              <h3 class="company-card__name"><span class="visually-hidden">5. </span>Dépannage Sanitaire MSR Sàrl</h3>
-              <div class="company-card__meta">
-                <p class="company-card__rating"><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span><strong>5,0/5</strong> · 20 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
-                <dl class="company-card__info">
-                  <div><dt>Fondée en :</dt><dd><span class="compare-table__missing">Non renseigné</span></dd></div>
-                  <div><dt>Entreprise enregistrée :</dt><dd><span class="status-pill"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Oui</span></dd></div>
-                </dl>
-              </div>
-              <p class="company-card__text">Entreprise installée au chemin du Raffort, à Lausanne. Elle assure le dépannage sanitaire courant : fuites, canalisations et appareils bouchés.</p>
-              <div class="company-card__points">
-                <p class="company-card__label">Points forts :</p>
-                <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Dépannage de fuites</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Débouchage de canalisations</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg><span>Intervention rapide à Lausanne</span></li></ul>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- BLOC 4 — selection criteria (homepage criteria component) -->
-    <section class="section section--cream" aria-labelledby="selection-title">
-      <div class="container">
-        <header class="section-head" data-reveal>
-          <div class="section-head__main">
-            <h2 class="section-head__title" id="selection-title">Comment nous avons sélectionné les meilleures entreprises sanitaires à Lausanne</h2>
-          </div>
-          <div class="section-head__aside">
-            <a class="btn btn--primary section-head__cta" href="/methodologie/">Voir notre méthodologie complète</a>
-          </div>
-        </header>
-        <ul class="criteria criteria--compact" data-reveal>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reviews"></use></svg></span>
-            <h3 class="criterion__title">Avis clients</h3>
-            <p class="criterion__text">Note et nombre d'avis Google de l'entreprise, relevés à la date de mise à jour. Une entreprise doit compter au moins 5 avis pour être classée.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-expertise"></use></svg></span>
-            <h3 class="criterion__title">Expertise</h3>
-            <p class="criterion__text">Maîtrise fédérale, CFC d'installateur sanitaire et adhésion à suissetec, quand l'information est publique.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reliability"></use></svg></span>
-            <h3 class="criterion__title">Fiabilité</h3>
-            <p class="criterion__text">Inscription au registre du commerce et ancienneté de l'entreprise.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-local"></use></svg></span>
-            <h3 class="criterion__title">Présence locale</h3>
-            <p class="criterion__text">Atelier ou bureau à Lausanne ou ailleurs dans le canton de Vaud.</p>
-          </li>
-          <li class="criterion">
-            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-pricing"></use></svg></span>
-            <h3 class="criterion__title">Transparence tarifaire</h3>
-            <p class="criterion__text">Tarifs horaires, forfaits de dépannage ou offre gratuite publiés sur le site de l'entreprise.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- BLOC 5 — comparison table, directly under its title (real <table>; the whole table slides
-         sideways on small screens, no visible scrollbar; an empty cell = no verified information) -->
-    <section class="section section--white section--table" aria-labelledby="table-title">
-      <div class="container">
-        <header class="section-head section-head--one-line" data-reveal>
-          <div class="section-head__main">
-            <h2 class="section-head__title" id="table-title">Comparatif des meilleures entreprises sanitaires à Lausanne</h2>
-          </div>
-        </header>
-        <div class="table-scroll" role="region" aria-labelledby="table-title" tabindex="0" data-reveal>
+        <div class="table-scroll" role="region" aria-labelledby="top-title" tabindex="0" data-reveal>
           <table class="compare-table">
             <thead>
               <tr>
@@ -455,6 +302,167 @@
             </tbody>
           </table>
         </div>
+      </div>
+    </section>
+
+    <!-- BLOC 4 — selection criteria (homepage criteria component) -->
+    <section class="section section--cream" aria-labelledby="selection-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <div class="section-head__main">
+            <h2 class="section-head__title" id="selection-title">Comment nous avons sélectionné les meilleures entreprises sanitaires à Lausanne</h2>
+          </div>
+          <div class="section-head__aside">
+            <a class="btn btn--primary section-head__cta" href="/methodologie/">Voir notre méthodologie complète</a>
+          </div>
+        </header>
+        <ul class="criteria criteria--compact" data-reveal>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reviews"></use></svg></span>
+            <h3 class="criterion__title">Avis clients</h3>
+            <p class="criterion__text">Note et nombre d'avis Google de l'entreprise, relevés à la date de mise à jour. Une entreprise doit compter au moins 5 avis pour être classée.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-expertise"></use></svg></span>
+            <h3 class="criterion__title">Expertise</h3>
+            <p class="criterion__text">Maîtrise fédérale, CFC d'installateur sanitaire et adhésion à suissetec, quand l'information est publique.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-reliability"></use></svg></span>
+            <h3 class="criterion__title">Fiabilité</h3>
+            <p class="criterion__text">Inscription au registre du commerce et ancienneté de l'entreprise.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-local"></use></svg></span>
+            <h3 class="criterion__title">Présence locale</h3>
+            <p class="criterion__text">Atelier ou bureau à Lausanne ou ailleurs dans le canton de Vaud.</p>
+          </li>
+          <li class="criterion">
+            <span class="criterion__icon"><svg class="icon icon--fine" aria-hidden="true" focusable="false"><use href="#i-c-pricing"></use></svg></span>
+            <h3 class="criterion__title">Transparence tarifaire</h3>
+            <p class="criterion__text">Tarifs horaires, forfaits de dépannage ou offre gratuite publiés sur le site de l'entreprise.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BLOC 5 — « Comparatif »: one white card per company (Margaux's mockup): « N°x » tab · logo (or initials) · name ·
+         rating + « Fondée en » + « Entreprise enregistrée » chips · text with key facts in bold · « Visiter le site »
+         on the right (partners only, DoFollow — Google Sheet « Client Flash #1–#5 ») · « Points forts » pills in a cream strip. -->
+    <section class="section section--white" aria-labelledby="comparatif-title">
+      <div class="container">
+        <header class="section-head section-head--one-line" data-reveal>
+          <div class="section-head__main">
+            <h2 class="section-head__title" id="comparatif-title">Comparatif des meilleures entreprises sanitaires à Lausanne</h2>
+          </div>
+        </header>
+        <ol class="ranking ranking--feature">
+          <!-- partner: DoFollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°1</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">FR</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">1. </span>Frangu Sàrl</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>5,0</strong><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="top-card__reviews">34 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Entreprise installée au <strong>chemin du Bois-Gentil</strong>, à Lausanne. Elle intervient pour l'installation d'appareils sanitaires et la rénovation de salles de bains, notamment le remplacement d'une baignoire par une douche.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://frangu.ch/">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Rénovation de salles de bains</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Remplacement de baignoire par une douche</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Intervention à Lausanne et environs</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°2</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">ST</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">2. </span>Sani-Ther Sàrl</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>5,0</strong><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="top-card__reviews">142 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Entreprise installée au <strong>chemin de Maillefer</strong>, à Lausanne. Elle réalise des travaux d'installation et de dépannage sanitaire pour les particuliers et les régies.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.sanither.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Installation sanitaire</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Dépannage</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Travaux pour particuliers et régies</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°3</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">FF</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">3. </span>FRB Frères Sàrl</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,9</strong><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span class="top-card__reviews">91 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Entreprise installée au <strong>chemin de la Vuachère</strong>, à Lausanne, disponible 24h/24. Elle intervient pour le dépannage de plomberie et des installations de chauffage, dont la pose de pompes à chaleur.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.frbfreres.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Dépannage de plomberie 24h/24</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Installations de chauffage</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Pompes à chaleur</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°4</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">SS</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">4. </span>Saniluxe Salles de bains Lausanne</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>4,9</strong><span class="stars" style="--rating: 4.9" aria-hidden="true"></span><span class="top-card__reviews">49 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Entreprise installée au <strong>chemin de Praz-Longet</strong>, au Mont-sur-Lausanne, spécialisée dans la rénovation complète de salles de bains.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.saniluxe.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Rénovation complète de salle de bains</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Devis après visite</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Présence dans l'agglomération lausannoise</li></ul>
+            </div>
+          </li>
+          <!-- not a partner: nofollow link -->
+          <li class="top-card" data-reveal>
+            <span class="top-card__rank" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-star"></use></svg>N°5</span>
+            <div class="top-card__main">
+              <div class="company-logo company-logo--mono" aria-hidden="true">DS</div>
+              <div class="top-card__body">
+                <h3 class="top-card__name"><span class="visually-hidden">5. </span>Dépannage Sanitaire MSR Sàrl</h3>
+                <div class="top-card__meta">
+                  <p class="top-card__rating"><strong>5,0</strong><span class="stars" style="--rating: 5.0" aria-hidden="true"></span><span class="top-card__reviews">20 avis Google</span><span class="g-attrib" translate="no"><img class="g-attrib__logo" src="../../images/google-maps-pin.webp" alt="Google Maps" width="12" height="17" loading="lazy" decoding="async"></span></p>
+                  <p class="top-card__chip"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-t-clock"></use></svg>Fondée en : <span class="top-card__missing">non renseigné</span></p>
+                  <p class="top-card__chip top-card__chip--ok"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Entreprise enregistrée : <strong>Oui</strong></p>
+                </div>
+                <p class="top-card__text">Entreprise installée au <strong>chemin du Raffort</strong>, à Lausanne. Elle assure le dépannage sanitaire courant : fuites, canalisations et appareils bouchés.</p>
+              </div>
+              <a class="btn btn--primary top-card__cta" href="https://www.msr-sanitaire.ch/" rel="nofollow noopener">Visiter le site</a>
+            </div>
+            <div class="top-card__points">
+              <p class="top-card__label">Points forts :</p>
+              <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Dépannage de fuites</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Débouchage de canalisations</li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Intervention rapide à Lausanne</li></ul>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
